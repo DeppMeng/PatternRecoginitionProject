@@ -29,6 +29,8 @@ def min_dis_classifier(train_data, test_data, num_classes, dim_input, method="av
             M[curr_class, :] += train_data.train_sample[i] / num_sample_in_class[curr_class]
     
     G = np.matmul(M, test_data) + np.matmul(M, np.transpose(M))
+    result = np.argmax(G)
+    return result
 
 
     
