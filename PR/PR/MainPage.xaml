@@ -62,11 +62,13 @@
                         <Button Content="Add as train data"
                                 Style="{StaticResource ButtonRevealStyle}"
                                 HorizontalAlignment="Stretch"
+                                Click="{x:Bind ViewModel.AddTrainData}"
                                 Margin="10">
                         </Button>
                         <Button Content="Add as test data"
                                 Style="{StaticResource ButtonRevealStyle}"
                                 HorizontalAlignment="Stretch"
+                                Click="{x:Bind ViewModel.AddTestData}"
                                 Margin="10">
                         </Button>
                     </StackPanel>

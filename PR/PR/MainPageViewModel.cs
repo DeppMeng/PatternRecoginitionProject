@@ -46,6 +46,15 @@ namespace PR
 
         #endregion
 
+        public async void AddTrainData()
+        {
+
+        }
+
+        public async void AddTestData()
+        {
+
+        }
 
     }
 }
