@@ -30,20 +30,47 @@ namespace PR
             set { classifierSelectIndex = value; OnPropertyChanged(); }
         }
 
-        private double testAccuracy = 0;
+        private double testAccuracy;
         public double TestAccuracy
         {
             get => testAccuracy;
             set { testAccuracy = value; OnPropertyChanged(); }
         }
 
-        private double trainAccuracy = 0;
+        private double trainAccuracy;
         public double TrainAccuracy
         {
             get => trainAccuracy;
             set { trainAccuracy = value; OnPropertyChanged(); }
         }
 
+        private string dataDisplay;
+        public string DataDisplay
+        {
+            get => dataDisplay;
+            set { dataDisplay = value; OnPropertyChanged(); }
+        }
+
+        private double addX;
+        public double AddX
+        {
+            get => addX;
+            set { addX = value; OnPropertyChanged(); }
+        }
+
+        private double addY;
+        public double AddY
+        {
+            get => addY;
+            set { addY = value; OnPropertyChanged(); }
+        }
+
+        private double addLabel;
+        public double AddLabel
+        {
+            get => addLabel;
+            set { addLabel = value; OnPropertyChanged(); }
+        }
         #endregion
 
         public async void AddTrainData()
@@ -55,6 +82,20 @@ namespace PR
         {
 
         }
+
+
+        #region Utility functions
+        private string FormatDataDisplay(List<Data> data)
+        {
+            string formatteddata = "[x, y]: label";
+            foreach (Data sample in data)
+            {
+                formatteddata += string.Format("[{0}, {1}]: {2}\n", sample.x, sample.y, sample.label);
+            }
+            return formatteddata;
+        }
+
+        #endregion
 
     }
 }

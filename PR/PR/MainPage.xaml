@@ -51,14 +51,68 @@
                                    TextAlignment="Left"
                                    FontSize="24">
                         </TextBlock>
+                        <ScrollViewer HorizontalAlignment="Stretch"
+                                      HorizontalScrollBarVisibility="Disabled"
+                                      VerticalScrollBarVisibility="Auto"
+                                      Margin="0"
+                                      Background="{ThemeResource CustomAcrylicBrush3}"
+                                      Height="300">
+                            <TextBlock Text="{x:Bind ViewModel.DataDisplay, Mode=OneWay}"
+                                       VerticalAlignment="Top"
+                                       Margin="10"
+                                       TextAlignment="Left">
+                            </TextBlock>
+                        </ScrollViewer>
                         <TextBlock Text="Input Data"
                                    Margin="10"
                                    HorizontalAlignment="Stretch"
                                    TextAlignment="Left"
                                    FontSize="24">
                         </TextBlock>
-                        <TextBox Margin="10">
-                        </TextBox>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" MaxWidth="120"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <TextBlock Text="X coordinate"
+                                       Margin="10"
+                                       Grid.Column="0"
+                                       Grid.Row="0"
+                                       VerticalAlignment="Center">
+                            </TextBlock>
+                            <TextBox Margin="10"
+                                     Grid.Column="1"
+                                     Grid.Row="0"
+                                     Text="{x:Bind ViewModel.AddX, Mode=TwoWay}">
+                            </TextBox>
+                            <TextBlock Text="Y coordinate"
+                                       Margin="10"
+                                       Grid.Column="0"
+                                       Grid.Row="1"
+                                       VerticalAlignment="Center">
+                            </TextBlock>
+                            <TextBox Margin="10"
+                                     Grid.Column="1"
+                                     Grid.Row="1"
+                                     Text="{x:Bind ViewModel.AddY, Mode=TwoWay}">
+                            </TextBox>
+                            <TextBlock Text="Label"
+                                       Margin="10"
+                                       Grid.Column="0"
+                                       Grid.Row="2"
+                                       VerticalAlignment="Center">
+                            </TextBlock>
+                            <TextBox Margin="10"
+                                     Grid.Column="1"
+                                     Grid.Row="2"
+                                     Text="{x:Bind ViewModel.AddLabel, Mode=TwoWay}">
+                            </TextBox>
+                        </Grid>
                         <Button Content="Add as train data"
                                 Style="{StaticResource ButtonRevealStyle}"
                                 HorizontalAlignment="Stretch"
