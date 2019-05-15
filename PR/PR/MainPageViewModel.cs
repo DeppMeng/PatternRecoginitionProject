@@ -73,22 +73,41 @@ namespace PR
         }
         #endregion
 
+
+        public List<Data> traindatas = new List<Data>();
+        public List<Data> testdatas = new List<Data>();
+
         public async void AddTrainData()
         {
-
+            Data tempdata = new Data();
+            tempdata.x = AddX;
+            tempdata.y = AddY;
+            tempdata.label = AddLabel;
+            traindatas.Add(tempdata);
+            DataDisplay = FormatDataDisplay();
         }
 
         public async void AddTestData()
         {
-
+            Data tempdata = new Data();
+            tempdata.x = AddX;
+            tempdata.y = AddY;
+            tempdata.label = AddLabel;
+            testdatas.Add(tempdata);
+            DataDisplay = FormatDataDisplay();
         }
 
 
         #region Utility functions
-        private string FormatDataDisplay(List<Data> data)
+        private string FormatDataDisplay()
         {
-            string formatteddata = "[x, y]: label";
-            foreach (Data sample in data)
+            string formatteddata = "Train Data\n[x, y]: label\n";
+            foreach (Data sample in traindatas)
+            {
+                formatteddata += string.Format("[{0}, {1}]: {2}\n", sample.x, sample.y, sample.label);
+            }
+            formatteddata += "\nTest Data\n[x, y]: label\n";
+            foreach (Data sample in testdatas)
             {
                 formatteddata += string.Format("[{0}, {1}]: {2}\n", sample.x, sample.y, sample.label);
             }
