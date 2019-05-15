@@ -10,6 +10,7 @@ using System.Collections.ObjectModel;
 using Windows.Storage;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Controls;
+using Windows.Web.Http;
 
 namespace PR
 {
@@ -76,30 +77,64 @@ namespace PR
 
         public List<Data> traindatas = new List<Data>();
         public List<Data> testdatas = new List<Data>();
+        string serverip = "127.0.0.1";
 
-        public async void AddTrainData()
+        public void AddTrainData()
         {
             Data tempdata = new Data();
             tempdata.x = AddX;
             tempdata.y = AddY;
             tempdata.label = AddLabel;
             traindatas.Add(tempdata);
-            DataDisplay = FormatDataDisplay();
+            FormatDataDisplay();
         }
 
-        public async void AddTestData()
+        public void AddTestData()
         {
             Data tempdata = new Data();
             tempdata.x = AddX;
             tempdata.y = AddY;
             tempdata.label = AddLabel;
             testdatas.Add(tempdata);
-            DataDisplay = FormatDataDisplay();
+            FormatDataDisplay();
+        }
+
+        public async void Train()
+        {
+            SendData senddata = new SendData();
+            senddata.traindata = traindatas;
+            senddata.action = 0;
+            senddata.classifiertype = ClassifierSelectIndex;
+
+            string send = JsonConvert.SerializeObject(senddata);
+            try
+            {
+                await SendInfo(send, 0);
+            }
+            catch
+            { }
+
+        }
+
+        public async void Test()
+        {
+            SendData senddata = new SendData();
+            senddata.testdata = testdatas;
+            senddata.action = 1;
+
+            string send = JsonConvert.SerializeObject(senddata);
+            try
+            {
+                await SendInfo(send, 1);
+            }
+            catch
+            { }
+
         }
 
 
         #region Utility functions
-        private string FormatDataDisplay()
+        private void FormatDataDisplay()
         {
             string formatteddata = "Train Data\n[x, y]: label\n";
             foreach (Data sample in traindatas)
@@ -111,9 +146,53 @@ namespace PR
             {
                 formatteddata += string.Format("[{0}, {1}]: {2}\n", sample.x, sample.y, sample.label);
             }
-            return formatteddata;
+            DataDisplay = formatteddata;
         }
 
+        public async Task SendInfo(string send, int func)
+        {
+            string str_uri = string.Format("http://{0}/post", serverip);
+            HttpResponseMessage httpresponse = new HttpResponseMessage();
+            string httpresponsebody;
+            Uri requestUri = new Uri(str_uri);
+            HttpClient httpclient = new HttpClient();
+
+            try
+            {
+                httpclient.DefaultRequestHeaders.Accept.Add(new Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue("application/json"));
+                httpresponse = await httpclient.PostAsync(requestUri, new HttpStringContent(send, Windows.Storage.Streams.UnicodeEncoding.Utf8, "application/json"));
+
+                httpresponsebody = await httpresponse.Content.ReadAsStringAsync();
+
+                //TODO
+
+            }
+            catch (Exception ex)
+            {
+                httpresponsebody = JsonConvert.SerializeObject("Error: " + ex.HResult.ToString("x") + "Message: " + ex.Message);
+                DisplayDialog("Connection failed", "Please check server IP address and your network status and try again");
+                throw (ex);
+
+            }
+        }
+
+        private async void DisplayDialog(string title, string content)
+        {
+            ContentDialog noWifiDialog = new ContentDialog
+            {
+                Title = title,
+                Content = content,
+                CloseButtonText = "Ok"
+            };
+            try
+            {
+                ContentDialogResult result = await noWifiDialog.ShowAsync();
+            }
+            catch
+            {
+
+            }
+        }
         #endregion
 
     }

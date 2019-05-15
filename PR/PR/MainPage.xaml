@@ -175,11 +175,13 @@
                         <Button Content="Train"
                                 Style="{StaticResource ButtonRevealStyle}"
                                 HorizontalAlignment="Stretch"
+                                Click="{x:Bind ViewModel.Train}"
                                 Margin="10">
                         </Button>
                         <Button Content="Test"
                                 Style="{StaticResource ButtonRevealStyle}"
                                 HorizontalAlignment="Stretch"
+                                Click="{x:Bind ViewModel.Test}"
                                 Margin="10">
                         </Button>
                         <TextBlock Text="Results"
