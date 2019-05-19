@@ -1,1 +1,1 @@
-C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\PR.csproj;x86
+D:\我的学习\模式识别\PatternRecoginitionProject\PR\PR\PR.csproj;x86
