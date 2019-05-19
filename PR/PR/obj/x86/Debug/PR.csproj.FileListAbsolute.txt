@@ -43,3 +43,5 @@ C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\obj\x86\
 C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\obj\x86\Debug\ProjectArchitectures.txt
 C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\bin\x86\Debug\Meowtrix.UniversalClassLibrary.dll
 C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\bin\x86\Debug\Newtonsoft.Json.dll
+C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\bin\x86\Debug\Microsoft.UI.Xaml.Markup.winmd
+C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636758264200000000.json

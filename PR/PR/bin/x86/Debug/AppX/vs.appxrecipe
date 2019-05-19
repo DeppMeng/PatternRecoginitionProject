@@ -19,7 +19,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>664DFC8259E3F1D69E164CCE06D1B42EE4EA3AE2576A821281233A859417CEC0</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>FC3BA4063E63ECB7091B41076D112A68698290B1FFBF45D6B9EF11906BFC48BB</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>df7797a4-ced2-49eb-a6e9-e967b6ff41bc_1.0.0.0_x86__gb0xeac3m3kaj</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>df7797a4-ced2-49eb-a6e9-e967b6ff41bc_gb0xeac3m3kaj!App</RegisteredUserModeAppID>
     <RegisteredPackageID>df7797a4-ced2-49eb-a6e9-e967b6ff41bc</RegisteredPackageID>
@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-05-15T08:53:59.600</Modified>
+      <Modified>2019-05-19T08:22:51.837</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\bin\x86\Debug\PR.exe">
       <PackagePath>entrypoint\PR.exe</PackagePath>
-      <Modified>2019-05-15T08:53:58.748</Modified>
+      <Modified>2019-05-19T08:22:51.338</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mdp\.nuget\packages\meowtrix.universalclasslibrary\1.3.2\lib\netstandard1.3\Meowtrix.UniversalClassLibrary.dll">
       <PackagePath>Meowtrix.UniversalClassLibrary.dll</PackagePath>
@@ -50,67 +50,71 @@
       <PackagePath>System.Runtime.dll</PackagePath>
       <Modified>2019-03-05T05:01:08.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.17763.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
+      <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
+      <Modified>2018-10-22T17:33:40.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2019-05-09T15:49:40.188</Modified>
+      <Modified>2019-05-15T15:45:33.157</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2019-05-07T05:47:12.870</Modified>
+      <Modified>2019-05-15T15:45:33.145</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-05-07T05:47:12.870</Modified>
+      <Modified>2019-05-15T15:45:33.146</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-05-07T05:47:12.870</Modified>
+      <Modified>2019-05-15T15:45:33.147</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-05-07T05:47:12.870</Modified>
+      <Modified>2019-05-15T15:45:33.148</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-05-07T05:47:12.870</Modified>
+      <Modified>2019-05-15T15:45:33.149</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-05-07T05:47:12.870</Modified>
+      <Modified>2019-05-15T15:45:33.150</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-05-07T05:47:12.870</Modified>
+      <Modified>2019-05-15T15:45:33.150</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\bin\x86\Debug\PR.xr.xml">
       <PackagePath>PR.xr.xml</PackagePath>
-      <Modified>2019-05-15T08:05:03.203</Modified>
+      <Modified>2019-05-19T08:22:51.038</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-05-15T08:53:58.227</Modified>
+      <Modified>2019-05-19T08:22:51.058</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2019-05-15T08:53:58.227</Modified>
+      <Modified>2019-05-19T08:22:51.058</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.16299.0\Windows.winmd">
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17763.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
-      <Modified>2017-09-28T09:28:16.000</Modified>
+      <Modified>2018-10-22T16:44:28.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2019-05-15T08:05:04.603</Modified>
+      <Modified>2019-05-15T15:49:33.190</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\bin\x86\Debug\Core\PR.exe">
       <PackagePath>PR.exe</PackagePath>
-      <Modified>2019-05-15T08:53:59.570</Modified>
+      <Modified>2019-05-19T08:22:51.830</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

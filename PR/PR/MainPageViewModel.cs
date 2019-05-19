@@ -31,6 +31,20 @@ namespace PR
             set { classifierSelectIndex = value; OnPropertyChanged(); }
         }
 
+        private ObservableCollection<string> datatypeSelect = new ObservableCollection<string>();
+        public ObservableCollection<string> DatatypeSelect
+        {
+            get => datatypeSelect;
+            set { datatypeSelect = value; OnPropertyChanged(); }
+        }
+
+        private int datatypeSelectIndex = 0;
+        public int DatatypeSelectIndex
+        {
+            get => datatypeSelectIndex;
+            set { datatypeSelectIndex = value; OnPropertyChanged(); }
+        }
+
         private double testAccuracy;
         public double TestAccuracy
         {
@@ -72,6 +86,20 @@ namespace PR
             get => addLabel;
             set { addLabel = value; OnPropertyChanged(); }
         }
+
+        private int numClasses;
+        public int NumClasses
+        {
+            get => numClasses;
+            set { numClasses = value; OnPropertyChanged(); }
+        }
+
+        private int numSamplePerClass;
+        public int NumSamplePerClass
+        {
+            get => numSamplePerClass;
+            set { numSamplePerClass = value; OnPropertyChanged(); }
+        }
         #endregion
 
 
@@ -96,6 +124,31 @@ namespace PR
             tempdata.y = AddY;
             tempdata.label = AddLabel;
             testdatas.Add(tempdata);
+            FormatDataDisplay();
+        }
+
+        public void GenerateData()
+        {
+            List<Data> list_center = new List<Data>();
+            Data temp_center = new Data();
+            for (int i = 0; i < NumClasses; i++)
+            {
+                temp_center.x = i;
+                temp_center.y = i;
+                temp_center.label = i;
+                list_center.Add(temp_center.Copy());
+            }
+            if (DatatypeSelectIndex == 0)
+                GenerateGaussianSample(traindatas, list_center, NumSamplePerClass, 1);
+            else
+                GenerateGaussianSample(testdatas, list_center, NumSamplePerClass, 1);
+            FormatDataDisplay();
+        }
+
+        public void ClearData()
+        {
+            traindatas = new List<Data>();
+            testdatas = new List<Data>();
             FormatDataDisplay();
         }
 
@@ -134,17 +187,17 @@ namespace PR
 
 
         #region Utility functions
-        private void FormatDataDisplay()
+        public void FormatDataDisplay()
         {
             string formatteddata = "Train Data\n[x, y]: label\n";
             foreach (Data sample in traindatas)
             {
-                formatteddata += string.Format("[{0}, {1}]: {2}\n", sample.x, sample.y, sample.label);
+                formatteddata += string.Format("[{0:F2}, {1:F2}]: {2}\n", sample.x, sample.y, sample.label);
             }
             formatteddata += "\nTest Data\n[x, y]: label\n";
             foreach (Data sample in testdatas)
             {
-                formatteddata += string.Format("[{0}, {1}]: {2}\n", sample.x, sample.y, sample.label);
+                formatteddata += string.Format("[{0:F2}, {1:F2}]: {2}\n", sample.x, sample.y, sample.label);
             }
             DataDisplay = formatteddata;
         }
@@ -193,6 +246,34 @@ namespace PR
 
             }
         }
+
+        private void GenerateGaussianSample(List<Data> list_data, List<Data> center, int num_sample, double sigma)
+        {
+            Random random = new Random();
+            Data temp_data = new Data();
+            for (int i = 0; i < num_sample; i++)
+            {
+                foreach (Data curr_center in center)
+                {
+                    temp_data.x = SampleGaussian(random, curr_center.x, sigma);
+                    temp_data.y = SampleGaussian(random, curr_center.y, sigma);
+                    temp_data.label = curr_center.label;
+                    list_data.Add(temp_data.Copy());
+                }
+            }
+        }
+
+        private static double SampleGaussian(Random random, double mean, double stddev)
+        {
+            // The method requires sampling from a uniform random of (0,1]
+            // but Random.NextDouble() returns a sample of [0,1).
+            double x1 = 1 - random.NextDouble();
+            double x2 = 1 - random.NextDouble();
+
+            double y1 = Math.Sqrt(-2.0 * Math.Log(x1)) * Math.Cos(2.0 * Math.PI * x2);
+            return y1 * stddev + mean;
+        }
+
         #endregion
 
     }
