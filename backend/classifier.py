@@ -6,22 +6,27 @@ train_labels = np.array([0, 0, 0, 1, 1, 1], dtype=int)
 test_points = np.array([[0, 0], [0, 1], [1, 1], [2, 1], [1, 0], [2, 0]])
 test_labels = np.array([0, 0, 1, 1, 0, 0], dtype=int)
 
-class Classifier:
+
+class _BaseClassifier:
     def __init__(self):
         self.num_classes = 2  # default as 2
         self.train_points = None
         self.train_labels = None
         self.test_points = None
         self.test_labels = None
-        self.pred_labels = None # output predicted labels
+        self.pred_labels = None  # output predicted labels
 
         self.train_accuracy = 0
         self.test_accuracy = 0
 
-        self.method = "min_dis"
+    def train(self, *args, **kwargs):
+        raise NotImplementedError
 
-        # minimum distance classifier
-        self.central_points = None
+    def test(self, *args, **kwargs):
+        raise NotImplementedError
+
+    def predict(self, *args, **kwargs):
+        raise NotImplementedError
 
     def _cal_accuracy(self, x, y):
         assert(x.shape==y.shape);
@@ -31,9 +36,10 @@ class Classifier:
                 cnt += 1
         return cnt/len(x)
 
-    def _dis_L2(self, x, y):
-        d = x - y
-        return np.sqrt(d[0] * d[0] + d[1] * d[1])
+    def _shuffle_train_data(self):
+        shuffle = np.random.permutation(self.train_points.shape[0])
+        self.train_points = self.train_points[shuffle]
+        self.train_labels = self.train_labels[shuffle]
 
     def _load_train_data(self, train_points, train_labels, num_classes=None):
         assert (isinstance(train_points, np.ndarray) and len(train_points) >= 2)
@@ -45,6 +51,18 @@ class Classifier:
         assert (self.num_classes >= 2)
         if num_classes:
             assert (self.num_classes == num_classes)
+
+
+class LinearClassifier(_BaseClassifier):
+    def __init__(self):
+        super(LinearClassifier, self).__init__()
+        self.method = "min_dis"
+        # minimum distance classifier
+        self.central_points = None
+
+    def _dis_L2(self, x, y):
+        d = x - y
+        return np.sqrt(d[0] * d[0] + d[1] * d[1])
 
     def predict(self, pred_points):
         try:
@@ -58,7 +76,7 @@ class Classifier:
             if self.method == "min_dis":
                 assert (isinstance(self.central_points, np.ndarray) and len(self.central_points) == self.num_classes)
                 for idx in range(len(pred_points)):
-                    dis = np.inf;
+                    dis = np.inf
                     label = -1
                     for c in range(self.num_classes):
                         this_dis = self._dis_L2(pred_points[idx], self.central_points[c])
@@ -92,9 +110,8 @@ class Classifier:
         self.test_accuracy = self._cal_accuracy(self.test_labels, self.pred_labels)
 
 
-
 if __name__ == "__main__":
-    classifier = Classifier()
+    classifier = LinearClassifier()
     classifier.train(train_points, train_labels, method="min_dis")
     classifier.test(test_points, test_labels)
     classifier.predict(np.array([[0, 0]]))
