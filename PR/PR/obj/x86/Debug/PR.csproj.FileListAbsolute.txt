@@ -8,7 +8,10 @@ C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\bin\x86\
 C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\bin\x86\Debug\Core\AppxManifest.xml
 C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\bin\x86\Debug\Core\PR.exe
 C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\bin\x86\Debug\PR.build.appxrecipe
+C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\bin\x86\Debug\Meowtrix.UniversalClassLibrary.dll
+C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\bin\x86\Debug\Newtonsoft.Json.dll
 C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\bin\x86\Debug\System.Runtime.dll
+C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\bin\x86\Debug\Microsoft.UI.Xaml.Markup.winmd
 C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\obj\x86\Debug\PR.csprojAssemblyReference.cache
 C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\obj\x86\Debug\App.g.i.cs
 C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\obj\x86\Debug\App.g.cs
@@ -41,7 +44,4 @@ C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\obj\x86\
 C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\obj\x86\Debug\qualifiers.txt.intermediate
 C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\obj\x86\Debug\ProjectArchitectures.txt
-C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\bin\x86\Debug\Meowtrix.UniversalClassLibrary.dll
-C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\bin\x86\Debug\Newtonsoft.Json.dll
-C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\bin\x86\Debug\Microsoft.UI.Xaml.Markup.winmd
 C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636758264200000000.json
