@@ -11,6 +11,6 @@ namespace PR
         public List<Data> traindata;
         public List<Data> testdata;
         public int classifiertype;
-        public int action;
+        public string request_type;
     }
 }

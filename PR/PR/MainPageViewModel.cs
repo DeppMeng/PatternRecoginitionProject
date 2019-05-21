@@ -105,7 +105,7 @@ namespace PR
 
         public List<Data> traindatas = new List<Data>();
         public List<Data> testdatas = new List<Data>();
-        string serverip = "127.0.0.1";
+        string serverip = "127.0.0.1:5000";
 
         public void AddTrainData()
         {
@@ -156,7 +156,7 @@ namespace PR
         {
             SendData senddata = new SendData();
             senddata.traindata = traindatas;
-            senddata.action = 0;
+            senddata.request_type = "Train";
             senddata.classifiertype = ClassifierSelectIndex;
 
             string send = JsonConvert.SerializeObject(senddata);
@@ -173,7 +173,7 @@ namespace PR
         {
             SendData senddata = new SendData();
             senddata.testdata = testdatas;
-            senddata.action = 1;
+            senddata.request_type = "Test";
 
             string send = JsonConvert.SerializeObject(senddata);
             try
