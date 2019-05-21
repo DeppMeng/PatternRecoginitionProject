@@ -80,11 +80,18 @@ namespace PR
             set { addY = value; OnPropertyChanged(); }
         }
 
-        private double addLabel;
-        public double AddLabel
+        private double sigma;
+        public double Sigma
         {
-            get => addLabel;
-            set { addLabel = value; OnPropertyChanged(); }
+            get => sigma;
+            set { sigma = value; OnPropertyChanged(); }
+        }
+
+        private int predictLabel;
+        public int PredictLabel
+        {
+            get => predictLabel;
+            set { predictLabel = value; OnPropertyChanged(); }
         }
 
         private int numClasses;
@@ -108,24 +115,48 @@ namespace PR
         string serverip = "127.0.0.1:5000";
         RecvData curr_recv_data = new RecvData();
 
-        public void AddTrainData()
-        {
-            Data tempdata = new Data();
-            tempdata.x = AddX;
-            tempdata.y = AddY;
-            tempdata.label = AddLabel;
-            traindatas.Add(tempdata);
-            FormatDataDisplay();
-        }
+        //public void AddTrainData()
+        //{
+        //    Data tempdata = new Data();
+        //    tempdata.x = AddX;
+        //    tempdata.y = AddY;
+        //    tempdata.label = AddLabel;
+        //    traindatas.Add(tempdata);
+        //    FormatDataDisplay();
+        //}
 
-        public void AddTestData()
+        //public void AddTestData()
+        //{
+        //    Data tempdata = new Data();
+        //    tempdata.x = AddX;
+        //    tempdata.y = AddY;
+        //    tempdata.label = AddLabel;
+        //    testdatas.Add(tempdata);
+        //    FormatDataDisplay();
+        //}
+
+
+        public async void Predict()
         {
             Data tempdata = new Data();
             tempdata.x = AddX;
             tempdata.y = AddY;
-            tempdata.label = AddLabel;
-            testdatas.Add(tempdata);
-            FormatDataDisplay();
+
+
+            SendData senddata = new SendData();
+            senddata.testdata.Add(tempdata);
+            senddata.request_type = "Predict";
+            senddata.classifiertype = ClassifierSelectIndex;
+
+            string send = JsonConvert.SerializeObject(senddata);
+            try
+            {
+                await SendInfo(send);
+                PredictLabel = curr_recv_data.pred_labels[0];
+            }
+            catch
+            { }
+
         }
 
         public void GenerateData()
@@ -140,9 +171,9 @@ namespace PR
                 list_center.Add(temp_center.Copy());
             }
             if (DatatypeSelectIndex == 0)
-                GenerateGaussianSample(traindatas, list_center, NumSamplePerClass, 1);
+                GenerateGaussianSample(traindatas, list_center, NumSamplePerClass, Sigma);
             else
-                GenerateGaussianSample(testdatas, list_center, NumSamplePerClass, 1);
+                GenerateGaussianSample(testdatas, list_center, NumSamplePerClass, Sigma);
             FormatDataDisplay();
         }
 
@@ -163,7 +194,8 @@ namespace PR
             string send = JsonConvert.SerializeObject(senddata);
             try
             {
-                await SendInfo(send, 0);
+                await SendInfo(send);
+                TrainAccuracy = curr_recv_data.train_accuracy;
             }
             catch
             { }
@@ -179,7 +211,8 @@ namespace PR
             string send = JsonConvert.SerializeObject(senddata);
             try
             {
-                await SendInfo(send, 1);
+                await SendInfo(send);
+                TestAccuracy = curr_recv_data.test_accuracy;
             }
             catch
             { }
@@ -203,7 +236,7 @@ namespace PR
             DataDisplay = formatteddata;
         }
 
-        public async Task SendInfo(string send, int func)
+        public async Task SendInfo(string send)
         {
             string str_uri = string.Format("http://{0}/post", serverip);
             RecvData temp_recv_data = new RecvData();

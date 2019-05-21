@@ -8,8 +8,8 @@ namespace PR
 {
     class RecvData
     {
-        double train_accuracy;
-        double test_accuracy;
-        List<int> pred_labels = new List<int>();
+        public List<int> pred_labels = new List<int>();
+        public double train_accuracy;
+        public double test_accuracy;
     }
 }

@@ -29,7 +29,7 @@ def train(jsonpack):
     classifier.train(train_points, train_labels, method=method)
     result = {
         "train_accuracy": classifier.train_accuracy,
-        "pred_labels": classifier.pred_labels
+        "pred_labels": classifier.pred_labels.tolist()
     }
     return result
 
@@ -38,7 +38,7 @@ def test(jsonpack):
     classifier.test(test_points, test_labels)
     result = {
         "test_accuracy": classifier.test_accuracy,
-        "pred_labels": classifier.pred_labels
+        "pred_labels": classifier.pred_labels.tolist()
     }
     return result
 
@@ -47,7 +47,7 @@ def predict(jsonpack):
     classifier.predict(pred_points)
     print(classifier.pred_labels)
     result = {
-        "pred_labels": classifier.pred_labels
+        "pred_labels": classifier.pred_labels.tolist()
     }
     return result
 
