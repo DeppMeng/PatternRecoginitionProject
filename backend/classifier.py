@@ -1,4 +1,6 @@
+import math
 import numpy as np
+from layer import *
 
 num_classes = 2
 train_points = np.array([[0, 0], [1, 0], [2, 0], [0, 1], [1, 1], [2, 1]])
@@ -110,9 +112,92 @@ class LinearClassifier(_BaseClassifier):
         self.test_accuracy = self._cal_accuracy(self.test_labels, self.pred_labels)
 
 
+class MlpClassifier(_BaseClassifier):
+    def __init__(self, num_layers, in_features, hidden_features, num_classes):
+        super(MlpClassifier, self).__init__()
+        self.nlayer = num_layers
+        self.in_features = in_features
+        self.hidden_features = hidden_features
+        self.num_classes = num_classes
+
+        if self.nlayer == 1:
+            self.module = [Linear(in_features, num_classes)]
+        else:
+            self.module = [Linear(in_features, hidden_features),
+                           Relu()]
+            for _ in range(num_layers - 2):
+                self.module += [Linear(hidden_features, hidden_features),
+                                Relu()]
+            self.module += [Linear(hidden_features, num_classes)]
+        self.LossLayer = CrossEntropyLoss()
+
+    def forward(self, x):
+        for layer in self.module:
+            x = layer(x)
+        return x
+
+    def backward(self):
+        grad = self.LossLayer.backward(1)
+        for i in range(len(self.module) - 1, -1, -1):
+            grad = self.module[i].backward(grad)
+
+    def update(self, lr):
+        for layer in self.module:
+            layer.update(lr)
+        self.LossLayer.update(lr)
+
+    def predict(self, pred_points):
+        try:
+            # confirm that pred_points is in shape of (len, self.in_features)
+            assert (isinstance(pred_points, np.ndarray) and len(pred_points) > 0)
+            assert (len(pred_points.shape) == 2 and pred_points.shape[1] == self.in_features)
+        except:
+            print("Error: The pred_points is a point list, which should be in shape of (len, 2).")
+        else:
+            pred_scores = self.forward(pred_points)
+            self.pred_labels = np.argmax(pred_scores, axis=1)
+
+    def train(self, train_points, train_labels, total_epochs, lr):
+        self._load_train_data(train_points, train_labels, num_classes=num_classes)
+        N = self.train_labels.shape[0]
+        for epoch in range(total_epochs):
+            epoch_loss = 0
+            self._shuffle_train_data()
+            for step in range(N):
+                data = self.train_points[step: step+1]
+                target = self.train_labels.reshape(-1, 1)[step: step+1]
+                pred_scores = self.forward(data)
+                loss = self.LossLayer(pred_scores, target)
+                self.backward()
+                self.update(lr)
+                epoch_loss += loss
+
+            self.predict(self.train_points)
+            self.train_accuracy = self._cal_accuracy(self.train_labels, self.pred_labels)
+            print("Epoch [{}/{}], Loss: {:.6f}, TrainAcc: {}".format(epoch, total_epochs, epoch_loss/N, self.train_accuracy))
+
+    def test(self, test_points, test_labels):
+        assert(len(test_points) == len(test_labels))
+        self.test_points = test_points
+        self.test_labels = test_labels
+        self.predict(self.test_points)
+        self.test_accuracy = self._cal_accuracy(self.test_labels, self.pred_labels)
+
+
+
+
+
 if __name__ == "__main__":
-    classifier = LinearClassifier()
-    classifier.train(train_points, train_labels, method="min_dis")
+    # classifier = LinearClassifier()
+    # classifier.train(train_points, train_labels, method="min_dis")
+    # classifier.test(test_points, test_labels)
+    # classifier.predict(np.array([[0, 0]]))
+    # print (classifier.pred_labels[0])
+    classifier = MlpClassifier(num_layers=1,
+                               in_features=2,
+                               hidden_features=2,
+                               num_classes=2)
+    classifier.train(train_points, train_labels, total_epochs=1000, lr=1.0)
     classifier.test(test_points, test_labels)
     classifier.predict(np.array([[0, 0]]))
-    print (classifier.pred_labels[0])
+    print(classifier.pred_labels)
