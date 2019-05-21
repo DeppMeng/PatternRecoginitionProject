@@ -20,6 +20,15 @@ def load_model(filename):
     return model
 
 
+def get_classifier(method, **kwargs):
+    if method == 'min_dis':
+        return LinearClassifier()
+    elif method == 'mlp':
+        return MlpClassifier(num_layers=kwargs['num_layer'],
+                             in_features=kwargs['in_features'],
+                             hidden_features=kwargs['hidden_features'],
+                             num_classes=kwargs['num_classes'])
+
 class _BaseClassifier:
     def __init__(self):
         self.num_classes = 2  # default as 2
@@ -28,14 +37,13 @@ class _BaseClassifier:
     def refresh(self):
         self.train_points = None
         self.train_labels = None
-        self.train_labels = None
         self.test_points = None
         self.test_labels = None
         self.pred_labels = None   # output predicted labels
         self.train_accuracy = 0
         self.test_accuracy = 0
 
-    def train(self, *args, **kwargs):
+    def train(self, train_points, train_labels, *args, **kwargs):
         raise NotImplementedError
 
     def test(self, *args, **kwargs):
@@ -72,7 +80,8 @@ class _BaseClassifier:
 class LinearClassifier(_BaseClassifier):
     def __init__(self):
         super(LinearClassifier, self).__init__()
-        self.method = "min_dis"
+        self.method_list = []
+
         # minimum distance classifier
         self.central_points = None
 
@@ -80,16 +89,18 @@ class LinearClassifier(_BaseClassifier):
         d = x - y
         return np.sqrt(d[0] * d[0] + d[1] * d[1])
 
-    def predict(self, pred_points):
+    def predict(self, pred_points, method='min_dis'):
         try:
             # confirm that pred_points is in shape of (len, 2)
             assert (isinstance(pred_points, np.ndarray) and len(pred_points) > 0)
             assert (len(pred_points.shape) == 2 and pred_points.shape[1] == 2)
+            # confirm that predict method is in self.method_list
+            assert method in self.method_list
         except:
             print("Error: The pred_points is a point list, which should be in shape of (len, 2).")
         else:
             self.pred_labels = np.zeros(len(pred_points), dtype=int)
-            if self.method == "min_dis":
+            if method == "min_dis":
                 assert (isinstance(self.central_points, np.ndarray) and len(self.central_points) == self.num_classes)
                 for idx in range(len(pred_points)):
                     dis = np.inf
@@ -102,10 +113,13 @@ class LinearClassifier(_BaseClassifier):
                     assert (label != -1)
                     self.pred_labels[idx] = label
 
-    def train(self, train_points, train_labels, method="min_dis", num_classes=None):
+    def train(self, train_points, train_labels, method="min_dis", num_classes=None, **kwargs):
         self._load_train_data(train_points, train_labels, num_classes=num_classes)
-        self.method = method
-        if self.method == "min_dis":
+        # register new method
+        if method not in self.method_list:
+            self.method_list.append(method)
+
+        if method == "min_dis":
             self.central_points = np.zeros((self.num_classes, 2))
             for c in range(self.num_classes):
                 sum = np.zeros(2)
@@ -118,11 +132,11 @@ class LinearClassifier(_BaseClassifier):
         self.predict(self.train_points)
         self.train_accuracy = self._cal_accuracy(self.train_labels, self.pred_labels)
 
-    def test(self, test_points, test_labels):
+    def test(self, test_points, test_labels, method='min_dis'):
         assert(len(test_points) == len(test_labels))
         self.test_points = test_points
         self.test_labels = test_labels
-        self.predict(self.test_points)
+        self.predict(self.test_points, method=method)
         self.test_accuracy = self._cal_accuracy(self.test_labels, self.pred_labels)
 
 
@@ -160,7 +174,7 @@ class MlpClassifier(_BaseClassifier):
             layer.update(lr)
         self.LossLayer.update(lr)
 
-    def predict(self, pred_points):
+    def predict(self, pred_points, ):
         try:
             # confirm that pred_points is in shape of (len, self.in_features)
             assert (isinstance(pred_points, np.ndarray) and len(pred_points) > 0)
@@ -171,15 +185,15 @@ class MlpClassifier(_BaseClassifier):
             pred_scores = self.forward(pred_points)
             self.pred_labels = np.argmax(pred_scores, axis=1)
 
-    def train(self, train_points, train_labels, total_epochs=1000, lr=0.1):
+    def train(self, train_points, train_labels, total_epochs=1000, lr=0.1, batch_size=1, **kwargs):
         self._load_train_data(train_points, train_labels, num_classes=num_classes)
         N = self.train_labels.shape[0]
         for epoch in range(total_epochs):
             epoch_loss = 0
             self._shuffle_train_data()
             for step in range(N):
-                data = self.train_points[step: step+1]
-                target = self.train_labels.reshape(-1, 1)[step: step+1]
+                data = self.train_points[step: step + batch_size]
+                target = self.train_labels.reshape(-1, 1)[step: step + batch_size]
                 pred_scores = self.forward(data)
                 loss = self.LossLayer(pred_scores, target)
                 self.backward()
@@ -200,21 +214,22 @@ class MlpClassifier(_BaseClassifier):
 
 if __name__ == "__main__":
     classifier = LinearClassifier()
+    # classifier = get_classifier(method='min_dis')
     classifier.train(train_points, train_labels, method="min_dis")
     classifier.test(test_points, test_labels)
     classifier.predict(np.array([[0, 0]]))
     print (classifier.pred_labels[0])
     classifier.refresh()
     save_model(classifier, 'temp/model.pkl')
-    classifier = load_model('temp/model.pkl')
-    classifier.predict(np.array([[0, 0]]))
-    print(classifier.pred_labels[0])
+    # classifier = load_model('temp/model.pkl')
+    # classifier.predict(np.array([[0, 0]]))
+    # print(classifier.pred_labels[0])
 
     # classifier = MlpClassifier(num_layers=2,
     #                            in_features=2,
     #                            hidden_features=10,
     #                            num_classes=2)
-    # classifier.train(train_points, train_labels, total_epochs=1000, lr=0.1)
+    # classifier.train(train_points, train_labels, total_epochs=1000, lr=0.1, batch_size=1)
     # classifier.test(test_points, test_labels)
     # classifier.predict(np.array([[0, 0]]))
     # print(classifier.pred_labels[0])
