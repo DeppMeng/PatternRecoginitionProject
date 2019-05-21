@@ -1,2 +1,6 @@
 *.suo
 *.cache
+PR/PR/bin
+PR/PR/obj
+
+PR/PR/Properties
