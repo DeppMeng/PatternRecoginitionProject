@@ -125,6 +125,7 @@
     </Compile>
     <Compile Include="MainPageViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecvData.cs" />
     <Compile Include="SendData.cs" />
   </ItemGroup>
   <ItemGroup>

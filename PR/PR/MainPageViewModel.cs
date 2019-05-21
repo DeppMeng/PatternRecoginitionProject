@@ -106,6 +106,7 @@ namespace PR
         public List<Data> traindatas = new List<Data>();
         public List<Data> testdatas = new List<Data>();
         string serverip = "127.0.0.1:5000";
+        RecvData curr_recv_data = new RecvData();
 
         public void AddTrainData()
         {
@@ -205,6 +206,8 @@ namespace PR
         public async Task SendInfo(string send, int func)
         {
             string str_uri = string.Format("http://{0}/post", serverip);
+            RecvData temp_recv_data = new RecvData();
+
             HttpResponseMessage httpresponse = new HttpResponseMessage();
             string httpresponsebody;
             Uri requestUri = new Uri(str_uri);
@@ -218,6 +221,8 @@ namespace PR
                 httpresponsebody = await httpresponse.Content.ReadAsStringAsync();
 
                 //TODO
+                temp_recv_data = JsonConvert.DeserializeObject<RecvData>(httpresponsebody);
+                curr_recv_data = temp_recv_data;
 
             }
             catch (Exception ex)
