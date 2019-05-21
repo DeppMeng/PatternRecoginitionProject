@@ -207,6 +207,7 @@ namespace PR
             SendData senddata = new SendData();
             senddata.testdata = testdatas;
             senddata.request_type = "Test";
+            senddata.classifiertype = ClassifierSelectIndex;
 
             string send = JsonConvert.SerializeObject(senddata);
             try

@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-05-21T14:58:28.243</Modified>
+      <Modified>2019-05-21T16:49:23.331</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\bin\x86\Debug\PR.exe">
       <PackagePath>entrypoint\PR.exe</PackagePath>
-      <Modified>2019-05-21T14:58:26.591</Modified>
+      <Modified>2019-05-21T16:49:22.516</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mdp\.nuget\packages\meowtrix.universalclasslibrary\1.3.2\lib\netstandard1.3\Meowtrix.UniversalClassLibrary.dll">
       <PackagePath>Meowtrix.UniversalClassLibrary.dll</PackagePath>
@@ -94,15 +94,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\bin\x86\Debug\PR.xr.xml">
       <PackagePath>PR.xr.xml</PackagePath>
-      <Modified>2019-05-21T14:25:25.329</Modified>
+      <Modified>2019-05-21T15:52:10.326</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-05-21T14:58:26.145</Modified>
+      <Modified>2019-05-21T16:49:22.073</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2019-05-21T14:58:26.145</Modified>
+      <Modified>2019-05-21T16:49:22.073</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17763.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -110,11 +110,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2019-05-21T14:58:27.083</Modified>
+      <Modified>2019-05-21T16:48:15.654</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\bin\x86\Debug\Core\PR.exe">
       <PackagePath>PR.exe</PackagePath>
-      <Modified>2019-05-21T14:58:28.196</Modified>
+      <Modified>2019-05-21T16:49:23.324</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
