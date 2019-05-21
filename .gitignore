@@ -1,0 +1,7 @@
+*.suo
+*.cache
+/PR/PR/bin
+/PR/PR/obj
+
+/PR/PR/Properties
+/backend/__pycache__/classifier.cpython-35.pyc

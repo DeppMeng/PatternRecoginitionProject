@@ -45,92 +45,116 @@
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" MinWidth="300"></ColumnDefinition>
-                        <ColumnDefinition Width="3*" MinWidth="300"></ColumnDefinition>
+                        <ColumnDefinition Width="5*" MinWidth="300"></ColumnDefinition>
                         <ColumnDefinition Width="*" MinWidth="300"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                    <StackPanel Grid.Column="0"
-                                Background="{ThemeResource CustomAcrylicBrush1}">
-                        <TextBlock Text="Data"
-                                   Margin="10"
-                                   HorizontalAlignment="Stretch"
-                                   TextAlignment="Left"
-                                   FontSize="24">
-                        </TextBlock>
-                        <ScrollViewer HorizontalAlignment="Stretch"
-                                      HorizontalScrollBarVisibility="Disabled"
-                                      VerticalScrollBarVisibility="Auto"
-                                      Margin="0"
-                                      Background="{ThemeResource CustomAcrylicBrush15}"
-                                      Height="300">
-                            <TextBlock Text="{x:Bind ViewModel.DataDisplay, Mode=OneWay}"
-                                       VerticalAlignment="Top"
+                    <ScrollViewer Grid.Column="0"
+                                  Background="{ThemeResource CustomAcrylicBrush1}"
+                                  HorizontalAlignment="Stretch"
+                                  HorizontalScrollBarVisibility="Disabled"
+                                  VerticalScrollBarVisibility="Auto"
+                                  Margin="0">
+                        <StackPanel>
+                            <TextBlock Text="Data"
                                        Margin="10"
-                                       TextAlignment="Left">
+                                       HorizontalAlignment="Stretch"
+                                       TextAlignment="Left"
+                                       FontSize="24">
                             </TextBlock>
-                        </ScrollViewer>
-                        <TextBlock Text="Input Data"
-                                   Margin="10"
-                                   HorizontalAlignment="Stretch"
-                                   TextAlignment="Left"
-                                   FontSize="24">
-                        </TextBlock>
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*" MaxWidth="120"></ColumnDefinition>
-                                <ColumnDefinition Width="*"></ColumnDefinition>
-                            </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="*"></RowDefinition>
-                                <RowDefinition Height="*"></RowDefinition>
-                                <RowDefinition Height="*"></RowDefinition>
-                            </Grid.RowDefinitions>
-                            <TextBlock Text="X coordinate"
+                            <ScrollViewer HorizontalAlignment="Stretch"
+                                          HorizontalScrollBarVisibility="Disabled"
+                                          VerticalScrollBarVisibility="Auto"
+                                          Margin="0"
+                                          Background="{ThemeResource CustomAcrylicBrush15}"
+                                          Height="400">
+                                <TextBlock Text="{x:Bind ViewModel.DataDisplay, Mode=OneWay}"
+                                           VerticalAlignment="Top"
+                                           Margin="10"
+                                           TextAlignment="Left">
+                                </TextBlock>
+                            </ScrollViewer>
+                            
+
+                            <TextBlock Text="Generate Random Data"
                                        Margin="10"
-                                       Grid.Column="0"
-                                       Grid.Row="0"
-                                       VerticalAlignment="Center">
+                                       HorizontalAlignment="Stretch"
+                                       TextAlignment="Left"
+                                       FontSize="24">
                             </TextBlock>
-                            <TextBox Margin="10"
-                                     Grid.Column="1"
-                                     Grid.Row="0"
-                                     Text="{x:Bind ViewModel.AddX, Mode=TwoWay}">
-                            </TextBox>
-                            <TextBlock Text="Y coordinate"
-                                       Margin="10"
-                                       Grid.Column="0"
-                                       Grid.Row="1"
-                                       VerticalAlignment="Center">
-                            </TextBlock>
-                            <TextBox Margin="10"
-                                     Grid.Column="1"
-                                     Grid.Row="1"
-                                     Text="{x:Bind ViewModel.AddY, Mode=TwoWay}">
-                            </TextBox>
-                            <TextBlock Text="Label"
-                                       Margin="10"
-                                       Grid.Column="0"
-                                       Grid.Row="2"
-                                       VerticalAlignment="Center">
-                            </TextBlock>
-                            <TextBox Margin="10"
-                                     Grid.Column="1"
-                                     Grid.Row="2"
-                                     Text="{x:Bind ViewModel.AddLabel, Mode=TwoWay}">
-                            </TextBox>
-                        </Grid>
-                        <Button Content="Add as train data"
-                                Style="{StaticResource ButtonRevealStyle}"
-                                HorizontalAlignment="Stretch"
-                                Click="{x:Bind ViewModel.AddTrainData}"
-                                Margin="10">
-                        </Button>
-                        <Button Content="Add as test data"
-                                Style="{StaticResource ButtonRevealStyle}"
-                                HorizontalAlignment="Stretch"
-                                Click="{x:Bind ViewModel.AddTestData}"
-                                Margin="10">
-                        </Button>
-                    </StackPanel>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" MaxWidth="120"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"></RowDefinition>
+                                    <RowDefinition Height="*"></RowDefinition>
+                                    <RowDefinition Height="*"></RowDefinition>
+                                    <RowDefinition Height="*"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <TextBlock Text="#Classes"
+                                           Margin="10"
+                                           Grid.Column="0"
+                                           Grid.Row="0"
+                                           VerticalAlignment="Center">
+                                </TextBlock>
+                                <TextBox Margin="10"
+                                         Grid.Column="1"
+                                         Grid.Row="0"
+                                         Text="{x:Bind ViewModel.NumClasses, Mode=TwoWay}">
+                                </TextBox>
+                                <TextBlock Text="#Sample / class"
+                                           Margin="10"
+                                           Grid.Column="0"
+                                           Grid.Row="1"
+                                           VerticalAlignment="Center">
+                                </TextBlock>
+                                <TextBox Margin="10"
+                                         Grid.Column="1"
+                                         Grid.Row="1"
+                                         Text="{x:Bind ViewModel.NumSamplePerClass, Mode=TwoWay}">
+                                </TextBox>
+                                <TextBlock Text="Std. Deviation"
+                                           Margin="10"
+                                           Grid.Column="0"
+                                           Grid.Row="2"
+                                           VerticalAlignment="Center">
+                                </TextBlock>
+                                <TextBox Margin="10"
+                                         Grid.Column="1"
+                                         Grid.Row="2"
+                                         Text="{x:Bind ViewModel.Sigma, Mode=TwoWay}">
+                                </TextBox>
+                                <TextBlock Text="Data type"
+                                           Margin="10"
+                                           Grid.Column="0"
+                                           Grid.Row="3"
+                                           VerticalAlignment="Center">
+                                </TextBlock>
+                                <ComboBox Grid.Column="1"
+                                                          Grid.Row="3"
+                                                          Margin="10"
+                                                          VerticalAlignment="Center"
+                                                          HorizontalAlignment="Stretch"
+                                                          ItemsSource="{x:Bind ViewModel.DatatypeSelect, Mode=OneWay}"
+                                                          SelectedIndex="{x:Bind ViewModel.DatatypeSelectIndex, Mode=TwoWay}">
+                                </ComboBox>
+                            </Grid>
+                            <Button Content="Generate"
+                                    Style="{StaticResource ButtonRevealStyle}"
+                                    HorizontalAlignment="Stretch"
+                                    Click="{x:Bind ViewModel.GenerateData}"
+                                    Margin="10">
+                            </Button>
+                            <Button Content="Clear Data"
+                                    Style="{StaticResource ButtonRevealStyle}"
+                                    HorizontalAlignment="Stretch"
+                                    Background="Red"
+                                    Click="{x:Bind ViewModel.ClearData}"
+                                    Margin="10">
+                            </Button>
+                        </StackPanel>
+                    </ScrollViewer>
                     <StackPanel Grid.Column="1"
                                 Background="{ThemeResource CustomAcrylicBrush2}">
                         <TextBlock Text="Visualization"
@@ -142,7 +166,7 @@
                     </StackPanel>
                     <StackPanel Grid.Column="2"
                                 Background="{ThemeResource CustomAcrylicBrush3}">
-                        <TextBlock Text="Settings"
+                        <TextBlock Text="Train and Test"
                                    Margin="10"
                                    HorizontalAlignment="Stretch"
                                    TextAlignment="Left"
@@ -184,12 +208,6 @@
                                 Click="{x:Bind ViewModel.Test}"
                                 Margin="10">
                         </Button>
-                        <TextBlock Text="Results"
-                                   Margin="10"
-                                   HorizontalAlignment="Stretch"
-                                   TextAlignment="Left"
-                                   FontSize="24">
-                        </TextBlock>
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*" MaxWidth="120"></ColumnDefinition>
@@ -222,6 +240,69 @@
                             <TextBlock Text="{x:Bind ViewModel.TestAccuracy, Mode=TwoWay}"
                                                        Grid.Column="1"
                                                        Grid.Row="1"
+                                                       Margin="10"
+                                                       VerticalAlignment="Center">
+                            </TextBlock>
+                        </Grid>
+                        <TextBlock Text="Predict"
+                                       Margin="10"
+                                       HorizontalAlignment="Stretch"
+                                       TextAlignment="Left"
+                                       FontSize="24">
+                        </TextBlock>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" MaxWidth="120"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <TextBlock Text="X coordinate"
+                                           Margin="10"
+                                           Grid.Column="0"
+                                           Grid.Row="0"
+                                           VerticalAlignment="Center">
+                            </TextBlock>
+                            <TextBox Margin="10"
+                                         Grid.Column="1"
+                                         Grid.Row="0"
+                                         Text="{x:Bind ViewModel.AddX, Mode=TwoWay}">
+                            </TextBox>
+                            <TextBlock Text="Y coordinate"
+                                           Margin="10"
+                                           Grid.Column="0"
+                                           Grid.Row="1"
+                                           VerticalAlignment="Center">
+                            </TextBlock>
+                            <TextBox Margin="10"
+                                         Grid.Column="1"
+                                         Grid.Row="1"
+                                         Text="{x:Bind ViewModel.AddY, Mode=TwoWay}">
+                            </TextBox>
+                        </Grid>
+                        <Button Content="Predict"
+                                    Style="{StaticResource ButtonRevealStyle}"
+                                    HorizontalAlignment="Stretch"
+                                    Click="{x:Bind ViewModel.Predict}"
+                                    Margin="10">
+                        </Button>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" MaxWidth="120"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="Predict Label:"
+                                                           Grid.Column="0"
+                                                           Grid.Row="0"
+                                                           Margin="10"
+                                                           TextAlignment="Left"
+                                                           VerticalAlignment="Center">
+                            </TextBlock>
+                            <TextBlock Text="{x:Bind ViewModel.PredictLabel, Mode=TwoWay}"
+                                                       Grid.Column="1"
+                                                       Grid.Row="0"
                                                        Margin="10"
                                                        VerticalAlignment="Center">
                             </TextBlock>

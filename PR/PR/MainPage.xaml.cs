@@ -40,6 +40,15 @@ namespace PR
             ViewModel.TrainAccuracy = 0;
             ViewModel.TestAccuracy = 0;
 
+            ViewModel.DatatypeSelect.Add("Train");
+            ViewModel.DatatypeSelect.Add("Test");
+
+            ViewModel.NumClasses = 1;
+            ViewModel.NumSamplePerClass = 1;
+            ViewModel.Sigma = 0.5;
+
+            ViewModel.FormatDataDisplay();
+
         }
     }
 }

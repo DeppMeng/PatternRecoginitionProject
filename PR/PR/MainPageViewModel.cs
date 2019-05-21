@@ -31,6 +31,20 @@ namespace PR
             set { classifierSelectIndex = value; OnPropertyChanged(); }
         }
 
+        private ObservableCollection<string> datatypeSelect = new ObservableCollection<string>();
+        public ObservableCollection<string> DatatypeSelect
+        {
+            get => datatypeSelect;
+            set { datatypeSelect = value; OnPropertyChanged(); }
+        }
+
+        private int datatypeSelectIndex = 0;
+        public int DatatypeSelectIndex
+        {
+            get => datatypeSelectIndex;
+            set { datatypeSelectIndex = value; OnPropertyChanged(); }
+        }
+
         private double testAccuracy;
         public double TestAccuracy
         {
@@ -66,36 +80,107 @@ namespace PR
             set { addY = value; OnPropertyChanged(); }
         }
 
-        private double addLabel;
-        public double AddLabel
+        private double sigma;
+        public double Sigma
         {
-            get => addLabel;
-            set { addLabel = value; OnPropertyChanged(); }
+            get => sigma;
+            set { sigma = value; OnPropertyChanged(); }
+        }
+
+        private int predictLabel;
+        public int PredictLabel
+        {
+            get => predictLabel;
+            set { predictLabel = value; OnPropertyChanged(); }
+        }
+
+        private int numClasses;
+        public int NumClasses
+        {
+            get => numClasses;
+            set { numClasses = value; OnPropertyChanged(); }
+        }
+
+        private int numSamplePerClass;
+        public int NumSamplePerClass
+        {
+            get => numSamplePerClass;
+            set { numSamplePerClass = value; OnPropertyChanged(); }
         }
         #endregion
 
 
         public List<Data> traindatas = new List<Data>();
         public List<Data> testdatas = new List<Data>();
-        string serverip = "127.0.0.1";
+        string serverip = "127.0.0.1:5000";
+        RecvData curr_recv_data = new RecvData();
 
-        public void AddTrainData()
+        //public void AddTrainData()
+        //{
+        //    Data tempdata = new Data();
+        //    tempdata.x = AddX;
+        //    tempdata.y = AddY;
+        //    tempdata.label = AddLabel;
+        //    traindatas.Add(tempdata);
+        //    FormatDataDisplay();
+        //}
+
+        //public void AddTestData()
+        //{
+        //    Data tempdata = new Data();
+        //    tempdata.x = AddX;
+        //    tempdata.y = AddY;
+        //    tempdata.label = AddLabel;
+        //    testdatas.Add(tempdata);
+        //    FormatDataDisplay();
+        //}
+
+
+        public async void Predict()
         {
             Data tempdata = new Data();
             tempdata.x = AddX;
             tempdata.y = AddY;
-            tempdata.label = AddLabel;
-            traindatas.Add(tempdata);
+
+
+            SendData senddata = new SendData();
+            senddata.testdata.Add(tempdata);
+            senddata.request_type = "Predict";
+            senddata.classifiertype = ClassifierSelectIndex;
+
+            string send = JsonConvert.SerializeObject(senddata);
+            try
+            {
+                await SendInfo(send);
+                PredictLabel = curr_recv_data.pred_labels[0];
+            }
+            catch
+            { }
+
+        }
+
+        public void GenerateData()
+        {
+            List<Data> list_center = new List<Data>();
+            Data temp_center = new Data();
+            for (int i = 0; i < NumClasses; i++)
+            {
+                temp_center.x = i;
+                temp_center.y = i;
+                temp_center.label = i;
+                list_center.Add(temp_center.Copy());
+            }
+            if (DatatypeSelectIndex == 0)
+                GenerateGaussianSample(traindatas, list_center, NumSamplePerClass, Sigma);
+            else
+                GenerateGaussianSample(testdatas, list_center, NumSamplePerClass, Sigma);
             FormatDataDisplay();
         }
 
-        public void AddTestData()
+        public void ClearData()
         {
-            Data tempdata = new Data();
-            tempdata.x = AddX;
-            tempdata.y = AddY;
-            tempdata.label = AddLabel;
-            testdatas.Add(tempdata);
+            traindatas = new List<Data>();
+            testdatas = new List<Data>();
             FormatDataDisplay();
         }
 
@@ -103,13 +188,14 @@ namespace PR
         {
             SendData senddata = new SendData();
             senddata.traindata = traindatas;
-            senddata.action = 0;
+            senddata.request_type = "Train";
             senddata.classifiertype = ClassifierSelectIndex;
 
             string send = JsonConvert.SerializeObject(senddata);
             try
             {
-                await SendInfo(send, 0);
+                await SendInfo(send);
+                TrainAccuracy = curr_recv_data.train_accuracy;
             }
             catch
             { }
@@ -120,12 +206,13 @@ namespace PR
         {
             SendData senddata = new SendData();
             senddata.testdata = testdatas;
-            senddata.action = 1;
+            senddata.request_type = "Test";
 
             string send = JsonConvert.SerializeObject(senddata);
             try
             {
-                await SendInfo(send, 1);
+                await SendInfo(send);
+                TestAccuracy = curr_recv_data.test_accuracy;
             }
             catch
             { }
@@ -134,24 +221,26 @@ namespace PR
 
 
         #region Utility functions
-        private void FormatDataDisplay()
+        public void FormatDataDisplay()
         {
             string formatteddata = "Train Data\n[x, y]: label\n";
             foreach (Data sample in traindatas)
             {
-                formatteddata += string.Format("[{0}, {1}]: {2}\n", sample.x, sample.y, sample.label);
+                formatteddata += string.Format("[{0:F2}, {1:F2}]: {2}\n", sample.x, sample.y, sample.label);
             }
             formatteddata += "\nTest Data\n[x, y]: label\n";
             foreach (Data sample in testdatas)
             {
-                formatteddata += string.Format("[{0}, {1}]: {2}\n", sample.x, sample.y, sample.label);
+                formatteddata += string.Format("[{0:F2}, {1:F2}]: {2}\n", sample.x, sample.y, sample.label);
             }
             DataDisplay = formatteddata;
         }
 
-        public async Task SendInfo(string send, int func)
+        public async Task SendInfo(string send)
         {
             string str_uri = string.Format("http://{0}/post", serverip);
+            RecvData temp_recv_data = new RecvData();
+
             HttpResponseMessage httpresponse = new HttpResponseMessage();
             string httpresponsebody;
             Uri requestUri = new Uri(str_uri);
@@ -165,6 +254,8 @@ namespace PR
                 httpresponsebody = await httpresponse.Content.ReadAsStringAsync();
 
                 //TODO
+                temp_recv_data = JsonConvert.DeserializeObject<RecvData>(httpresponsebody);
+                curr_recv_data = temp_recv_data;
 
             }
             catch (Exception ex)
@@ -193,6 +284,34 @@ namespace PR
 
             }
         }
+
+        private void GenerateGaussianSample(List<Data> list_data, List<Data> center, int num_sample, double sigma)
+        {
+            Random random = new Random();
+            Data temp_data = new Data();
+            for (int i = 0; i < num_sample; i++)
+            {
+                foreach (Data curr_center in center)
+                {
+                    temp_data.x = SampleGaussian(random, curr_center.x, sigma);
+                    temp_data.y = SampleGaussian(random, curr_center.y, sigma);
+                    temp_data.label = curr_center.label;
+                    list_data.Add(temp_data.Copy());
+                }
+            }
+        }
+
+        private static double SampleGaussian(Random random, double mean, double stddev)
+        {
+            // The method requires sampling from a uniform random of (0,1]
+            // but Random.NextDouble() returns a sample of [0,1).
+            double x1 = 1 - random.NextDouble();
+            double x2 = 1 - random.NextDouble();
+
+            double y1 = Math.Sqrt(-2.0 * Math.Log(x1)) * Math.Cos(2.0 * Math.PI * x2);
+            return y1 * stddev + mean;
+        }
+
         #endregion
 
     }

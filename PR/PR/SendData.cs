@@ -8,9 +8,9 @@ namespace PR
 {
     public class SendData
     {
-        public List<Data> traindata;
-        public List<Data> testdata;
+        public List<Data> traindata = new List<Data>();
+        public List<Data> testdata = new List<Data>();
         public int classifiertype;
-        public int action;
+        public string request_type;
     }
 }
