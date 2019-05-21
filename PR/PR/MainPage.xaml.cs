@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.ApplicationModel.Core;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI;
+using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -22,9 +25,30 @@ namespace PR
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        private MainPageViewModel ViewModel = new MainPageViewModel();
         public MainPage()
         {
             this.InitializeComponent();
+            ApplicationViewTitleBar formattableTitleBar = ApplicationView.GetForCurrentView().TitleBar;
+            formattableTitleBar.ButtonBackgroundColor = Colors.Transparent;
+            CoreApplicationViewTitleBar coreTitleBar = CoreApplication.GetCurrentView().TitleBar;
+            coreTitleBar.ExtendViewIntoTitleBar = true;
+
+            ViewModel.ClassifierSelect.Add("Average Sample");
+            ViewModel.ClassifierSelect.Add("Average Distance");
+            ViewModel.ClassifierSelect.Add("Nearest Neighbor");
+            ViewModel.TrainAccuracy = 0;
+            ViewModel.TestAccuracy = 0;
+
+            ViewModel.DatatypeSelect.Add("Train");
+            ViewModel.DatatypeSelect.Add("Test");
+
+            ViewModel.NumClasses = 1;
+            ViewModel.NumSamplePerClass = 1;
+            ViewModel.Sigma = 0.5;
+
+            ViewModel.FormatDataDisplay();
+
         }
     }
 }
