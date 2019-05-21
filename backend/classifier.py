@@ -1,4 +1,4 @@
-import math
+import pickle
 import numpy as np
 from layer import *
 
@@ -9,15 +9,29 @@ test_points = np.array([[0, 0], [0, 1], [1, 1], [2, 1], [1, 0], [2, 0]])
 test_labels = np.array([0, 0, 1, 1, 0, 0], dtype=int)
 
 
+def save_model(model, filename):
+    with open(filename, 'wb') as f:
+        pickle.dump(model, f)
+
+
+def load_model(filename):
+    with open(filename, 'rb') as f:
+        model = pickle.load(f)
+    return model
+
+
 class _BaseClassifier:
     def __init__(self):
         self.num_classes = 2  # default as 2
+        self.refresh()
+
+    def refresh(self):
         self.train_points = None
+        self.train_labels = None
         self.train_labels = None
         self.test_points = None
         self.test_labels = None
-        self.pred_labels = None  # output predicted labels
-
+        self.pred_labels = None   # output predicted labels
         self.train_accuracy = 0
         self.test_accuracy = 0
 
@@ -157,7 +171,7 @@ class MlpClassifier(_BaseClassifier):
             pred_scores = self.forward(pred_points)
             self.pred_labels = np.argmax(pred_scores, axis=1)
 
-    def train(self, train_points, train_labels, total_epochs, lr):
+    def train(self, train_points, train_labels, total_epochs=1000, lr=0.1):
         self._load_train_data(train_points, train_labels, num_classes=num_classes)
         N = self.train_labels.shape[0]
         for epoch in range(total_epochs):
@@ -184,20 +198,23 @@ class MlpClassifier(_BaseClassifier):
         self.test_accuracy = self._cal_accuracy(self.test_labels, self.pred_labels)
 
 
-
-
-
 if __name__ == "__main__":
-    # classifier = LinearClassifier()
-    # classifier.train(train_points, train_labels, method="min_dis")
-    # classifier.test(test_points, test_labels)
-    # classifier.predict(np.array([[0, 0]]))
-    # print (classifier.pred_labels[0])
-    classifier = MlpClassifier(num_layers=1,
-                               in_features=2,
-                               hidden_features=2,
-                               num_classes=2)
-    classifier.train(train_points, train_labels, total_epochs=1000, lr=1.0)
+    classifier = LinearClassifier()
+    classifier.train(train_points, train_labels, method="min_dis")
     classifier.test(test_points, test_labels)
     classifier.predict(np.array([[0, 0]]))
-    print(classifier.pred_labels)
+    print (classifier.pred_labels[0])
+    classifier.refresh()
+    save_model(classifier, 'temp/model.pkl')
+    classifier = load_model('temp/model.pkl')
+    classifier.predict(np.array([[0, 0]]))
+    print(classifier.pred_labels[0])
+
+    # classifier = MlpClassifier(num_layers=2,
+    #                            in_features=2,
+    #                            hidden_features=10,
+    #                            num_classes=2)
+    # classifier.train(train_points, train_labels, total_epochs=1000, lr=0.1)
+    # classifier.test(test_points, test_labels)
+    # classifier.predict(np.array([[0, 0]]))
+    # print(classifier.pred_labels[0])
