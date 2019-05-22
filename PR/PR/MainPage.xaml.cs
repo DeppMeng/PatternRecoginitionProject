@@ -34,9 +34,8 @@ namespace PR
             CoreApplicationViewTitleBar coreTitleBar = CoreApplication.GetCurrentView().TitleBar;
             coreTitleBar.ExtendViewIntoTitleBar = true;
 
-            ViewModel.ClassifierSelect.Add("Average Sample");
-            ViewModel.ClassifierSelect.Add("Average Distance");
-            ViewModel.ClassifierSelect.Add("Nearest Neighbor");
+            ViewModel.ClassifierSelect.Add("Min Distance");
+            ViewModel.ClassifierSelect.Add("Multi-layer Perceptron");
             ViewModel.TrainAccuracy = 0;
             ViewModel.TestAccuracy = 0;
 
