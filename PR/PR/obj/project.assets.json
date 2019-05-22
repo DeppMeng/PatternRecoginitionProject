@@ -327,68 +327,6 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
-      },
-      "Syncfusion.Chart.Base/17.1.0.48": {
-        "type": "package",
-        "dependencies": {
-          "Syncfusion.Licensing": "17.1.0.48",
-          "Syncfusion.Shared.Base": "17.1.0.48"
-        },
-        "compile": {
-          "lib/net46/Syncfusion.Chart.Base.dll": {}
-        },
-        "runtime": {
-          "lib/net46/Syncfusion.Chart.Base.dll": {}
-        }
-      },
-      "Syncfusion.Chart.Windows/17.1.0.48": {
-        "type": "package",
-        "dependencies": {
-          "Syncfusion.Chart.Base": "17.1.0.48",
-          "Syncfusion.Grouping.Base": "17.1.0.48",
-          "Syncfusion.Licensing": "17.1.0.48",
-          "Syncfusion.Shared.Base": "17.1.0.48"
-        },
-        "compile": {
-          "lib/net46/Syncfusion.Chart.Windows.dll": {}
-        },
-        "runtime": {
-          "lib/net46/Syncfusion.Chart.Windows.dll": {}
-        }
-      },
-      "Syncfusion.Grouping.Base/17.1.0.48": {
-        "type": "package",
-        "dependencies": {
-          "Syncfusion.Licensing": "17.1.0.48",
-          "Syncfusion.Shared.Base": "17.1.0.48"
-        },
-        "compile": {
-          "lib/net46/Syncfusion.Grouping.Base.dll": {}
-        },
-        "runtime": {
-          "lib/net46/Syncfusion.Grouping.Base.dll": {}
-        }
-      },
-      "Syncfusion.Licensing/17.1.0.48": {
-        "type": "package",
-        "compile": {
-          "lib/uap10.0/Syncfusion.Licensing.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/Syncfusion.Licensing.dll": {}
-        }
-      },
-      "Syncfusion.Shared.Base/17.1.0.48": {
-        "type": "package",
-        "dependencies": {
-          "Syncfusion.Licensing": "17.1.0.48"
-        },
-        "compile": {
-          "lib/net46/Syncfusion.Shared.Base.dll": {}
-        },
-        "runtime": {
-          "lib/net46/Syncfusion.Shared.Base.dll": {}
-        }
       }
     },
     "UAP,Version=v10.0.16299/win10-arm": {
@@ -895,68 +833,6 @@
         "build": {
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
-        }
-      },
-      "Syncfusion.Chart.Base/17.1.0.48": {
-        "type": "package",
-        "dependencies": {
-          "Syncfusion.Licensing": "17.1.0.48",
-          "Syncfusion.Shared.Base": "17.1.0.48"
-        },
-        "compile": {
-          "lib/net46/Syncfusion.Chart.Base.dll": {}
-        },
-        "runtime": {
-          "lib/net46/Syncfusion.Chart.Base.dll": {}
-        }
-      },
-      "Syncfusion.Chart.Windows/17.1.0.48": {
-        "type": "package",
-        "dependencies": {
-          "Syncfusion.Chart.Base": "17.1.0.48",
-          "Syncfusion.Grouping.Base": "17.1.0.48",
-          "Syncfusion.Licensing": "17.1.0.48",
-          "Syncfusion.Shared.Base": "17.1.0.48"
-        },
-        "compile": {
-          "lib/net46/Syncfusion.Chart.Windows.dll": {}
-        },
-        "runtime": {
-          "lib/net46/Syncfusion.Chart.Windows.dll": {}
-        }
-      },
-      "Syncfusion.Grouping.Base/17.1.0.48": {
-        "type": "package",
-        "dependencies": {
-          "Syncfusion.Licensing": "17.1.0.48",
-          "Syncfusion.Shared.Base": "17.1.0.48"
-        },
-        "compile": {
-          "lib/net46/Syncfusion.Grouping.Base.dll": {}
-        },
-        "runtime": {
-          "lib/net46/Syncfusion.Grouping.Base.dll": {}
-        }
-      },
-      "Syncfusion.Licensing/17.1.0.48": {
-        "type": "package",
-        "compile": {
-          "lib/uap10.0/Syncfusion.Licensing.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/Syncfusion.Licensing.dll": {}
-        }
-      },
-      "Syncfusion.Shared.Base/17.1.0.48": {
-        "type": "package",
-        "dependencies": {
-          "Syncfusion.Licensing": "17.1.0.48"
-        },
-        "compile": {
-          "lib/net46/Syncfusion.Shared.Base.dll": {}
-        },
-        "runtime": {
-          "lib/net46/Syncfusion.Shared.Base.dll": {}
         }
       }
     },
@@ -1466,68 +1342,6 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
-      },
-      "Syncfusion.Chart.Base/17.1.0.48": {
-        "type": "package",
-        "dependencies": {
-          "Syncfusion.Licensing": "17.1.0.48",
-          "Syncfusion.Shared.Base": "17.1.0.48"
-        },
-        "compile": {
-          "lib/net46/Syncfusion.Chart.Base.dll": {}
-        },
-        "runtime": {
-          "lib/net46/Syncfusion.Chart.Base.dll": {}
-        }
-      },
-      "Syncfusion.Chart.Windows/17.1.0.48": {
-        "type": "package",
-        "dependencies": {
-          "Syncfusion.Chart.Base": "17.1.0.48",
-          "Syncfusion.Grouping.Base": "17.1.0.48",
-          "Syncfusion.Licensing": "17.1.0.48",
-          "Syncfusion.Shared.Base": "17.1.0.48"
-        },
-        "compile": {
-          "lib/net46/Syncfusion.Chart.Windows.dll": {}
-        },
-        "runtime": {
-          "lib/net46/Syncfusion.Chart.Windows.dll": {}
-        }
-      },
-      "Syncfusion.Grouping.Base/17.1.0.48": {
-        "type": "package",
-        "dependencies": {
-          "Syncfusion.Licensing": "17.1.0.48",
-          "Syncfusion.Shared.Base": "17.1.0.48"
-        },
-        "compile": {
-          "lib/net46/Syncfusion.Grouping.Base.dll": {}
-        },
-        "runtime": {
-          "lib/net46/Syncfusion.Grouping.Base.dll": {}
-        }
-      },
-      "Syncfusion.Licensing/17.1.0.48": {
-        "type": "package",
-        "compile": {
-          "lib/uap10.0/Syncfusion.Licensing.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/Syncfusion.Licensing.dll": {}
-        }
-      },
-      "Syncfusion.Shared.Base/17.1.0.48": {
-        "type": "package",
-        "dependencies": {
-          "Syncfusion.Licensing": "17.1.0.48"
-        },
-        "compile": {
-          "lib/net46/Syncfusion.Shared.Base.dll": {}
-        },
-        "runtime": {
-          "lib/net46/Syncfusion.Shared.Base.dll": {}
-        }
       }
     },
     "UAP,Version=v10.0.16299/win10-arm64-aot": {
@@ -2036,68 +1850,6 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
-      },
-      "Syncfusion.Chart.Base/17.1.0.48": {
-        "type": "package",
-        "dependencies": {
-          "Syncfusion.Licensing": "17.1.0.48",
-          "Syncfusion.Shared.Base": "17.1.0.48"
-        },
-        "compile": {
-          "lib/net46/Syncfusion.Chart.Base.dll": {}
-        },
-        "runtime": {
-          "lib/net46/Syncfusion.Chart.Base.dll": {}
-        }
-      },
-      "Syncfusion.Chart.Windows/17.1.0.48": {
-        "type": "package",
-        "dependencies": {
-          "Syncfusion.Chart.Base": "17.1.0.48",
-          "Syncfusion.Grouping.Base": "17.1.0.48",
-          "Syncfusion.Licensing": "17.1.0.48",
-          "Syncfusion.Shared.Base": "17.1.0.48"
-        },
-        "compile": {
-          "lib/net46/Syncfusion.Chart.Windows.dll": {}
-        },
-        "runtime": {
-          "lib/net46/Syncfusion.Chart.Windows.dll": {}
-        }
-      },
-      "Syncfusion.Grouping.Base/17.1.0.48": {
-        "type": "package",
-        "dependencies": {
-          "Syncfusion.Licensing": "17.1.0.48",
-          "Syncfusion.Shared.Base": "17.1.0.48"
-        },
-        "compile": {
-          "lib/net46/Syncfusion.Grouping.Base.dll": {}
-        },
-        "runtime": {
-          "lib/net46/Syncfusion.Grouping.Base.dll": {}
-        }
-      },
-      "Syncfusion.Licensing/17.1.0.48": {
-        "type": "package",
-        "compile": {
-          "lib/uap10.0/Syncfusion.Licensing.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/Syncfusion.Licensing.dll": {}
-        }
-      },
-      "Syncfusion.Shared.Base/17.1.0.48": {
-        "type": "package",
-        "dependencies": {
-          "Syncfusion.Licensing": "17.1.0.48"
-        },
-        "compile": {
-          "lib/net46/Syncfusion.Shared.Base.dll": {}
-        },
-        "runtime": {
-          "lib/net46/Syncfusion.Shared.Base.dll": {}
-        }
       }
     },
     "UAP,Version=v10.0.16299/win10-x64": {
@@ -2604,68 +2356,6 @@
         "build": {
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
-        }
-      },
-      "Syncfusion.Chart.Base/17.1.0.48": {
-        "type": "package",
-        "dependencies": {
-          "Syncfusion.Licensing": "17.1.0.48",
-          "Syncfusion.Shared.Base": "17.1.0.48"
-        },
-        "compile": {
-          "lib/net46/Syncfusion.Chart.Base.dll": {}
-        },
-        "runtime": {
-          "lib/net46/Syncfusion.Chart.Base.dll": {}
-        }
-      },
-      "Syncfusion.Chart.Windows/17.1.0.48": {
-        "type": "package",
-        "dependencies": {
-          "Syncfusion.Chart.Base": "17.1.0.48",
-          "Syncfusion.Grouping.Base": "17.1.0.48",
-          "Syncfusion.Licensing": "17.1.0.48",
-          "Syncfusion.Shared.Base": "17.1.0.48"
-        },
-        "compile": {
-          "lib/net46/Syncfusion.Chart.Windows.dll": {}
-        },
-        "runtime": {
-          "lib/net46/Syncfusion.Chart.Windows.dll": {}
-        }
-      },
-      "Syncfusion.Grouping.Base/17.1.0.48": {
-        "type": "package",
-        "dependencies": {
-          "Syncfusion.Licensing": "17.1.0.48",
-          "Syncfusion.Shared.Base": "17.1.0.48"
-        },
-        "compile": {
-          "lib/net46/Syncfusion.Grouping.Base.dll": {}
-        },
-        "runtime": {
-          "lib/net46/Syncfusion.Grouping.Base.dll": {}
-        }
-      },
-      "Syncfusion.Licensing/17.1.0.48": {
-        "type": "package",
-        "compile": {
-          "lib/uap10.0/Syncfusion.Licensing.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/Syncfusion.Licensing.dll": {}
-        }
-      },
-      "Syncfusion.Shared.Base/17.1.0.48": {
-        "type": "package",
-        "dependencies": {
-          "Syncfusion.Licensing": "17.1.0.48"
-        },
-        "compile": {
-          "lib/net46/Syncfusion.Shared.Base.dll": {}
-        },
-        "runtime": {
-          "lib/net46/Syncfusion.Shared.Base.dll": {}
         }
       }
     },
@@ -3175,68 +2865,6 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
-      },
-      "Syncfusion.Chart.Base/17.1.0.48": {
-        "type": "package",
-        "dependencies": {
-          "Syncfusion.Licensing": "17.1.0.48",
-          "Syncfusion.Shared.Base": "17.1.0.48"
-        },
-        "compile": {
-          "lib/net46/Syncfusion.Chart.Base.dll": {}
-        },
-        "runtime": {
-          "lib/net46/Syncfusion.Chart.Base.dll": {}
-        }
-      },
-      "Syncfusion.Chart.Windows/17.1.0.48": {
-        "type": "package",
-        "dependencies": {
-          "Syncfusion.Chart.Base": "17.1.0.48",
-          "Syncfusion.Grouping.Base": "17.1.0.48",
-          "Syncfusion.Licensing": "17.1.0.48",
-          "Syncfusion.Shared.Base": "17.1.0.48"
-        },
-        "compile": {
-          "lib/net46/Syncfusion.Chart.Windows.dll": {}
-        },
-        "runtime": {
-          "lib/net46/Syncfusion.Chart.Windows.dll": {}
-        }
-      },
-      "Syncfusion.Grouping.Base/17.1.0.48": {
-        "type": "package",
-        "dependencies": {
-          "Syncfusion.Licensing": "17.1.0.48",
-          "Syncfusion.Shared.Base": "17.1.0.48"
-        },
-        "compile": {
-          "lib/net46/Syncfusion.Grouping.Base.dll": {}
-        },
-        "runtime": {
-          "lib/net46/Syncfusion.Grouping.Base.dll": {}
-        }
-      },
-      "Syncfusion.Licensing/17.1.0.48": {
-        "type": "package",
-        "compile": {
-          "lib/uap10.0/Syncfusion.Licensing.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/Syncfusion.Licensing.dll": {}
-        }
-      },
-      "Syncfusion.Shared.Base/17.1.0.48": {
-        "type": "package",
-        "dependencies": {
-          "Syncfusion.Licensing": "17.1.0.48"
-        },
-        "compile": {
-          "lib/net46/Syncfusion.Shared.Base.dll": {}
-        },
-        "runtime": {
-          "lib/net46/Syncfusion.Shared.Base.dll": {}
-        }
       }
     },
     "UAP,Version=v10.0.16299/win10-x86": {
@@ -3743,68 +3371,6 @@
         },
         "native": {
           "runtimes/win10-x86/nativeassets/uap10.0.15138/clrcompression.dll": {}
-        }
-      },
-      "Syncfusion.Chart.Base/17.1.0.48": {
-        "type": "package",
-        "dependencies": {
-          "Syncfusion.Licensing": "17.1.0.48",
-          "Syncfusion.Shared.Base": "17.1.0.48"
-        },
-        "compile": {
-          "lib/net46/Syncfusion.Chart.Base.dll": {}
-        },
-        "runtime": {
-          "lib/net46/Syncfusion.Chart.Base.dll": {}
-        }
-      },
-      "Syncfusion.Chart.Windows/17.1.0.48": {
-        "type": "package",
-        "dependencies": {
-          "Syncfusion.Chart.Base": "17.1.0.48",
-          "Syncfusion.Grouping.Base": "17.1.0.48",
-          "Syncfusion.Licensing": "17.1.0.48",
-          "Syncfusion.Shared.Base": "17.1.0.48"
-        },
-        "compile": {
-          "lib/net46/Syncfusion.Chart.Windows.dll": {}
-        },
-        "runtime": {
-          "lib/net46/Syncfusion.Chart.Windows.dll": {}
-        }
-      },
-      "Syncfusion.Grouping.Base/17.1.0.48": {
-        "type": "package",
-        "dependencies": {
-          "Syncfusion.Licensing": "17.1.0.48",
-          "Syncfusion.Shared.Base": "17.1.0.48"
-        },
-        "compile": {
-          "lib/net46/Syncfusion.Grouping.Base.dll": {}
-        },
-        "runtime": {
-          "lib/net46/Syncfusion.Grouping.Base.dll": {}
-        }
-      },
-      "Syncfusion.Licensing/17.1.0.48": {
-        "type": "package",
-        "compile": {
-          "lib/uap10.0/Syncfusion.Licensing.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/Syncfusion.Licensing.dll": {}
-        }
-      },
-      "Syncfusion.Shared.Base/17.1.0.48": {
-        "type": "package",
-        "dependencies": {
-          "Syncfusion.Licensing": "17.1.0.48"
-        },
-        "compile": {
-          "lib/net46/Syncfusion.Shared.Base.dll": {}
-        },
-        "runtime": {
-          "lib/net46/Syncfusion.Shared.Base.dll": {}
         }
       }
     },
@@ -4313,68 +3879,6 @@
         "build": {
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
-        }
-      },
-      "Syncfusion.Chart.Base/17.1.0.48": {
-        "type": "package",
-        "dependencies": {
-          "Syncfusion.Licensing": "17.1.0.48",
-          "Syncfusion.Shared.Base": "17.1.0.48"
-        },
-        "compile": {
-          "lib/net46/Syncfusion.Chart.Base.dll": {}
-        },
-        "runtime": {
-          "lib/net46/Syncfusion.Chart.Base.dll": {}
-        }
-      },
-      "Syncfusion.Chart.Windows/17.1.0.48": {
-        "type": "package",
-        "dependencies": {
-          "Syncfusion.Chart.Base": "17.1.0.48",
-          "Syncfusion.Grouping.Base": "17.1.0.48",
-          "Syncfusion.Licensing": "17.1.0.48",
-          "Syncfusion.Shared.Base": "17.1.0.48"
-        },
-        "compile": {
-          "lib/net46/Syncfusion.Chart.Windows.dll": {}
-        },
-        "runtime": {
-          "lib/net46/Syncfusion.Chart.Windows.dll": {}
-        }
-      },
-      "Syncfusion.Grouping.Base/17.1.0.48": {
-        "type": "package",
-        "dependencies": {
-          "Syncfusion.Licensing": "17.1.0.48",
-          "Syncfusion.Shared.Base": "17.1.0.48"
-        },
-        "compile": {
-          "lib/net46/Syncfusion.Grouping.Base.dll": {}
-        },
-        "runtime": {
-          "lib/net46/Syncfusion.Grouping.Base.dll": {}
-        }
-      },
-      "Syncfusion.Licensing/17.1.0.48": {
-        "type": "package",
-        "compile": {
-          "lib/uap10.0/Syncfusion.Licensing.dll": {}
-        },
-        "runtime": {
-          "lib/uap10.0/Syncfusion.Licensing.dll": {}
-        }
-      },
-      "Syncfusion.Shared.Base/17.1.0.48": {
-        "type": "package",
-        "dependencies": {
-          "Syncfusion.Licensing": "17.1.0.48"
-        },
-        "compile": {
-          "lib/net46/Syncfusion.Shared.Base.dll": {}
-        },
-        "runtime": {
-          "lib/net46/Syncfusion.Shared.Base.dll": {}
         }
       }
     }
@@ -8850,141 +8354,13 @@
         "runtimes/win10-x86/lib/uap10.0.15138/netstandard.dll",
         "runtimes/win10-x86/nativeassets/uap10.0.15138/clrcompression.dll"
       ]
-    },
-    "Syncfusion.Chart.Base/17.1.0.48": {
-      "sha512": "Sn8WMeptoPZH6C3sDUEs8ObNJNFLaybyx+08RWVrBY/ELtjTfITyi8kXO8HgAMbQTrrUY7t2I7Dj6WiQStBaQg==",
-      "type": "package",
-      "path": "syncfusion.chart.base/17.1.0.48",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net20/Syncfusion.Chart.Base.dll",
-        "lib/net20/Syncfusion.Chart.Base.xml",
-        "lib/net35/Syncfusion.Chart.Base.dll",
-        "lib/net35/Syncfusion.Chart.Base.xml",
-        "lib/net40/Syncfusion.Chart.Base.dll",
-        "lib/net40/Syncfusion.Chart.Base.xml",
-        "lib/net45/Syncfusion.Chart.Base.dll",
-        "lib/net45/Syncfusion.Chart.Base.xml",
-        "lib/net451/Syncfusion.Chart.Base.dll",
-        "lib/net451/Syncfusion.Chart.Base.xml",
-        "lib/net46/Syncfusion.Chart.Base.dll",
-        "lib/net46/Syncfusion.Chart.Base.xml",
-        "lib/netcoreapp3.0/Syncfusion.Chart.Base.dll",
-        "lib/netcoreapp3.0/Syncfusion.Chart.Base.xml",
-        "syncfusion.chart.base.17.1.0.48.nupkg.sha512",
-        "syncfusion.chart.base.nuspec"
-      ]
-    },
-    "Syncfusion.Chart.Windows/17.1.0.48": {
-      "sha512": "HVBAocFgDtTGb6InW5JiYgl43hwReGzdS41vRSB8SsVo51J8JP8rzDsdOyJuX9GQo+p6kP7hjZhu6CIVA0t8KA==",
-      "type": "package",
-      "path": "syncfusion.chart.windows/17.1.0.48",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net20/Syncfusion.Chart.Windows.dll",
-        "lib/net20/Syncfusion.Chart.Windows.xml",
-        "lib/net35/Syncfusion.Chart.Windows.dll",
-        "lib/net35/Syncfusion.Chart.Windows.xml",
-        "lib/net40/Syncfusion.Chart.Windows.dll",
-        "lib/net40/Syncfusion.Chart.Windows.xml",
-        "lib/net45/Syncfusion.Chart.Windows.dll",
-        "lib/net45/Syncfusion.Chart.Windows.xml",
-        "lib/net451/Syncfusion.Chart.Windows.dll",
-        "lib/net451/Syncfusion.Chart.Windows.xml",
-        "lib/net46/Syncfusion.Chart.Windows.dll",
-        "lib/net46/Syncfusion.Chart.Windows.xml",
-        "lib/netcoreapp3.0/Syncfusion.Chart.Windows.dll",
-        "lib/netcoreapp3.0/Syncfusion.Chart.Windows.xml",
-        "syncfusion.chart.windows.17.1.0.48.nupkg.sha512",
-        "syncfusion.chart.windows.nuspec"
-      ]
-    },
-    "Syncfusion.Grouping.Base/17.1.0.48": {
-      "sha512": "4cOOQRihiySTwvxguvUb9l91NrxjU+FE1fqpWJjwxt6a5dmrpjniHwGlrWsT4aMsXfDEqJXoI4+VMUvH2hXb7g==",
-      "type": "package",
-      "path": "syncfusion.grouping.base/17.1.0.48",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net20/Syncfusion.Grouping.Base.dll",
-        "lib/net20/Syncfusion.Grouping.Base.xml",
-        "lib/net35/Syncfusion.Grouping.Base.dll",
-        "lib/net35/Syncfusion.Grouping.Base.xml",
-        "lib/net40/Syncfusion.Grouping.Base.dll",
-        "lib/net40/Syncfusion.Grouping.Base.xml",
-        "lib/net45/Syncfusion.Grouping.Base.dll",
-        "lib/net45/Syncfusion.Grouping.Base.xml",
-        "lib/net451/Syncfusion.Grouping.Base.dll",
-        "lib/net451/Syncfusion.Grouping.Base.xml",
-        "lib/net46/Syncfusion.Grouping.Base.dll",
-        "lib/net46/Syncfusion.Grouping.Base.xml",
-        "lib/netcoreapp3.0/Syncfusion.Grouping.Base.dll",
-        "lib/netcoreapp3.0/Syncfusion.Grouping.Base.xml",
-        "syncfusion.grouping.base.17.1.0.48.nupkg.sha512",
-        "syncfusion.grouping.base.nuspec"
-      ]
-    },
-    "Syncfusion.Licensing/17.1.0.48": {
-      "sha512": "xIlyScb+t+9D7hmf9G+83HFVCrhwFFCZBpLj3OD377TEuBUKRVQFK88vlGG2KRtVB4oBiMCjKC4yZutLNmsvig==",
-      "type": "package",
-      "path": "syncfusion.licensing/17.1.0.48",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/MonoAndroid10/Syncfusion.Licensing.dll",
-        "lib/Xamarin.Mac/Syncfusion.Licensing.dll",
-        "lib/Xamarin.iOS10/Syncfusion.Licensing.dll",
-        "lib/net20/Syncfusion.Licensing.dll",
-        "lib/net35/Syncfusion.Licensing.dll",
-        "lib/net40/Syncfusion.Licensing.dll",
-        "lib/net45/Syncfusion.Licensing.dll",
-        "lib/net451/Syncfusion.Licensing.dll",
-        "lib/net46/Syncfusion.Licensing.dll",
-        "lib/netcoreapp3.0/Syncfusion.Licensing.dll",
-        "lib/netstandard1.0/Syncfusion.Licensing.dll",
-        "lib/netstandard1.2/Syncfusion.Licensing.dll",
-        "lib/netstandard1.4/Syncfusion.Licensing.dll",
-        "lib/netstandard2.0/Syncfusion.Licensing.dll",
-        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Licensing.dll",
-        "lib/uap10.0/Syncfusion.Licensing.dll",
-        "syncfusion.licensing.17.1.0.48.nupkg.sha512",
-        "syncfusion.licensing.nuspec"
-      ]
-    },
-    "Syncfusion.Shared.Base/17.1.0.48": {
-      "sha512": "Pl5aVmi19v1ziYrR2nuUB0FuTORLnMCm3lDP1NV0nX5057dAO+uQi5PrGWyWNn6Z4OaERgkIlEDgxTCyx4yRCA==",
-      "type": "package",
-      "path": "syncfusion.shared.base/17.1.0.48",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net20/Syncfusion.Shared.Base.dll",
-        "lib/net20/Syncfusion.Shared.Base.xml",
-        "lib/net35/Syncfusion.Shared.Base.dll",
-        "lib/net35/Syncfusion.Shared.Base.xml",
-        "lib/net40/Syncfusion.Shared.Base.dll",
-        "lib/net40/Syncfusion.Shared.Base.xml",
-        "lib/net45/Syncfusion.Shared.Base.dll",
-        "lib/net45/Syncfusion.Shared.Base.xml",
-        "lib/net451/Syncfusion.Shared.Base.dll",
-        "lib/net451/Syncfusion.Shared.Base.xml",
-        "lib/net46/Syncfusion.Shared.Base.dll",
-        "lib/net46/Syncfusion.Shared.Base.xml",
-        "lib/netcoreapp3.0/Syncfusion.Shared.Base.dll",
-        "lib/netcoreapp3.0/Syncfusion.Shared.Base.xml",
-        "syncfusion.shared.base.17.1.0.48.nupkg.sha512",
-        "syncfusion.shared.base.nuspec"
-      ]
     }
   },
   "projectFileDependencyGroups": {
     "UAP,Version=v10.0.16299": [
       "Meowtrix.UniversalClassLibrary >= 1.3.2",
       "Microsoft.NETCore.UniversalWindowsPlatform >= 6.2.7",
-      "Newtonsoft.Json >= 12.0.2",
-      "Syncfusion.Chart.Windows >= 17.1.0.48"
+      "Newtonsoft.Json >= 12.0.2"
     ]
   },
   "packageFolders": {
@@ -9035,10 +8411,6 @@
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[12.0.2, )"
-          },
-          "Syncfusion.Chart.Windows": {
-            "target": "Package",
-            "version": "[17.1.0.48, )"
           }
         },
         "imports": [
@@ -9071,47 +8443,5 @@
         "#import": []
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "已使用“.NETFramework,Version=v4.6.1”而不是项目目标框架“UAP,Version=v10.0.16299”还原包“Syncfusion.Chart.Base 17.1.0.48”。此包可能与项目不完全兼容。",
-      "libraryId": "Syncfusion.Chart.Base",
-      "targetGraphs": [
-        "UAP,Version=v10.0.16299"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "已使用“.NETFramework,Version=v4.6.1”而不是项目目标框架“UAP,Version=v10.0.16299”还原包“Syncfusion.Chart.Windows 17.1.0.48”。此包可能与项目不完全兼容。",
-      "libraryId": "Syncfusion.Chart.Windows",
-      "targetGraphs": [
-        "UAP,Version=v10.0.16299"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "已使用“.NETFramework,Version=v4.6.1”而不是项目目标框架“UAP,Version=v10.0.16299”还原包“Syncfusion.Grouping.Base 17.1.0.48”。此包可能与项目不完全兼容。",
-      "libraryId": "Syncfusion.Grouping.Base",
-      "targetGraphs": [
-        "UAP,Version=v10.0.16299"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "已使用“.NETFramework,Version=v4.6.1”而不是项目目标框架“UAP,Version=v10.0.16299”还原包“Syncfusion.Shared.Base 17.1.0.48”。此包可能与项目不完全兼容。",
-      "libraryId": "Syncfusion.Shared.Base",
-      "targetGraphs": [
-        "UAP,Version=v10.0.16299"
-      ]
-    }
-  ]
+  }
 }

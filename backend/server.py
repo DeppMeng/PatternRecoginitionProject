@@ -1,10 +1,12 @@
 from flask import Flask, request, jsonify
 import json
-from classifier import Classifier
+from classifier import LinearClassifier, MlpClassifier
 import numpy as np
 
 app = Flask(__name__)
-classifier = Classifier() # To confirm: global variable should be defined here?
+LC = LinearClassifier()
+NLC = MlpClassifier(num_layers=2, in_features=2, hidden_features=5, num_classes=2)
+type_train_classifier = 0   # 0 is linear classifier, and 1 is nonlinear classifier
 
 def unpack(package):
     '''
@@ -22,33 +24,58 @@ def unpack(package):
     return np.array(points), np.array(labels, dtype=int)
 
 def train(jsonpack):
+    global type_train_classifier
     train_points, train_labels = unpack(jsonpack['traindata'])
-    method = 'min_dis'
-    # if jsonpack['method']:
-    #     method = jsonpack['method']
-    classifier.train(train_points, train_labels, method=method)
-    result = {
-        "train_accuracy": classifier.train_accuracy,
-        "pred_labels": classifier.pred_labels.tolist()
-    }
+    if jsonpack['classifiertype'] == 0:
+        type_train_classifier = 0
+        LC.train(train_points, train_labels, method='min_dis')
+        result = {
+            "train_accuracy": LC.train_accuracy,
+            "pred_labels": LC.pred_labels.tolist()
+        }
+    else:
+        type_train_classifier = 1
+        NLC.train(train_points, train_labels, total_epochs=100, lr=0.1)
+        result = {
+            "train_accuracy": NLC.train_accuracy,
+            "pred_labels": NLC.pred_labels.tolist()
+        }
     return result
 
 def test(jsonpack):
     test_points, test_labels = unpack(jsonpack['testdata'])
-    classifier.test(test_points, test_labels)
-    result = {
-        "test_accuracy": classifier.test_accuracy,
-        "pred_labels": classifier.pred_labels.tolist()
-    }
+    if jsonpack['classifiertype'] == 0:
+        assert(type_train_classifier == 0)
+        LC.test(test_points, test_labels)
+        result = {
+            "test_accuracy": LC.test_accuracy,
+            "pred_labels": LC.pred_labels.tolist()
+        }
+    else:
+        assert (type_train_classifier == 1)
+        NLC.test(test_points, test_labels)
+        result = {
+            "test_accuracy": NLC.test_accuracy,
+            "pred_labels": NLC.pred_labels.tolist()
+        }
     return result
 
 def predict(jsonpack):
     pred_points, _ = unpack(jsonpack['testdata'])
-    classifier.predict(pred_points)
-    print(classifier.pred_labels)
-    result = {
-        "pred_labels": classifier.pred_labels.tolist()
-    }
+    if jsonpack['classifiertype'] == 0:
+        assert(type_train_classifier == 0)
+        LC.predict(pred_points)
+        print(LC.pred_labels)
+        result = {
+            "pred_labels": LC.pred_labels.tolist()
+        }
+    else:
+        assert (type_train_classifier == 1)
+        NLC.predict(pred_points)
+        print(NLC.pred_labels)
+        result = {
+            "pred_labels": NLC.pred_labels.tolist()
+        }
     return result
 
 POST_FUNCS = {
