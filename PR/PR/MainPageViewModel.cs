@@ -24,6 +24,13 @@ namespace PR
             set { classifierSelect = value; OnPropertyChanged(); }
         }
 
+        private ObservableCollection<Data4Vis> dataVis = new ObservableCollection<Data4Vis>();
+        public ObservableCollection<Data4Vis> DataVis
+        {
+            get => dataVis;
+            set { dataVis = value; OnPropertyChanged(); }
+        }
+
         private int classifierSelectIndex = 0;
         public int ClassifierSelectIndex
         {
@@ -171,9 +178,18 @@ namespace PR
                 list_center.Add(temp_center.Copy());
             }
             if (DatatypeSelectIndex == 0)
-                GenerateGaussianSample(traindatas, list_center, NumSamplePerClass, Sigma);
+            {
+                GenerateGaussianSample(traindatas, DataVis, list_center, NumSamplePerClass, Sigma);
+                Data4Vis temp_datavis = new Data4Vis();
+                temp_datavis.x = 1;
+                temp_datavis.y = 1;
+                temp_datavis.label = 1;
+
+                DataVis.Add(temp_datavis);
+
+            }
             else
-                GenerateGaussianSample(testdatas, list_center, NumSamplePerClass, Sigma);
+                GenerateGaussianSample(testdatas, DataVis, list_center, NumSamplePerClass, Sigma);
             FormatDataDisplay();
         }
 
@@ -181,6 +197,7 @@ namespace PR
         {
             traindatas = new List<Data>();
             testdatas = new List<Data>();
+            DataVis.Clear();
             FormatDataDisplay();
         }
 
@@ -286,10 +303,11 @@ namespace PR
             }
         }
 
-        private void GenerateGaussianSample(List<Data> list_data, List<Data> center, int num_sample, double sigma)
+        private void GenerateGaussianSample(List<Data> list_data, ObservableCollection<Data4Vis> list_datavis, List<Data> center, int num_sample, double sigma)
         {
             Random random = new Random();
             Data temp_data = new Data();
+            Data4Vis temp_datavis = new Data4Vis();
             for (int i = 0; i < num_sample; i++)
             {
                 foreach (Data curr_center in center)
@@ -298,6 +316,11 @@ namespace PR
                     temp_data.y = SampleGaussian(random, curr_center.y, sigma);
                     temp_data.label = curr_center.label;
                     list_data.Add(temp_data.Copy());
+
+                    temp_datavis.x = temp_data.x;
+                    temp_datavis.y = temp_data.y;
+                    temp_datavis.label = curr_center.label;
+                    list_datavis.Add(temp_datavis.Copy());
                 }
             }
         }

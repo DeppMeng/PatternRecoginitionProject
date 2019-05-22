@@ -38,6 +38,7 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="Children" />
       <RootProperty Name="Background" />
+      <RootProperty Name="VerticalAlignment" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
       <RootProperty Name="Text" />
@@ -86,6 +87,17 @@
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="ItemsSource" />
       <RootProperty Name="SelectedIndex" />
+    </RootType>
+    <RootType FullName="WinRTXamlToolkit.Controls.DataVisualization.Charting.Chart">
+      <RootProperty Name="Height" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Series" />
+    </RootType>
+    <RootType FullName="WinRTXamlToolkit.Controls.DataVisualization.Charting.ScatterSeries">
+      <RootProperty Name="Title" />
+      <RootProperty Name="IndependentValuePath" />
+      <RootProperty Name="DependentValuePath" />
+      <RootProperty Name="ItemsSource" />
     </RootType>
     <RootType FullName="PR.MainPage" />
   </Roots.RootTypes>

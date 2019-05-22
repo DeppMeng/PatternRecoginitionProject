@@ -45,3 +45,10 @@ C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\obj\x86\
 C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\obj\x86\Debug\ProjectArchitectures.txt
 C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636758264200000000.json
+C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\bin\x86\Debug\WinRTXamlToolkit.dll
+C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\bin\x86\Debug\WinRTXamlToolkit.Controls.DataVisualization.dll
+C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\obj\x86\Debug\WinRTXamlToolkit.Controls.DataVisualization\en-US\WinRTXamlToolkit.Controls.DataVisualization.Properties.Resources.resw
+C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\obj\x86\Debug\resources.en-us.resfiles
+C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\obj\x86\Debug\resources.en-us.resfiles.intermediate
+C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\obj\x86\Debug\WinRTXamlToolkit.pri.xml
+C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\obj\x86\Debug\WinRTXamlToolkit.Controls.DataVisualization.pri.xml
