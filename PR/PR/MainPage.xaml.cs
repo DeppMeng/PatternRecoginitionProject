@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Windows.Graphics.Display;
 using WinRTXamlToolkit.Controls.DataVisualization.Charting;
 
 // https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x804 上介绍了“空白页”项模板
@@ -49,6 +50,7 @@ namespace PR
 
             ViewModel.FormatDataDisplay();
 
+           
         }
     }
 }

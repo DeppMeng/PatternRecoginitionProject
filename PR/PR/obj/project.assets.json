@@ -27,12 +27,12 @@
           "build/Microsoft.Net.Native.Compiler.targets": {}
         }
       },
-      "Microsoft.Net.UWPCoreRuntimeSdk/2.2.7": {
+      "Microsoft.Net.UWPCoreRuntimeSdk/2.2.8": {
         "type": "package",
         "dependencies": {
-          "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk": "2.2.7",
-          "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk": "2.2.7",
-          "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk": "2.2.7"
+          "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk": "2.2.8",
+          "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk": "2.2.8",
+          "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk": "2.2.8"
         },
         "build": {
           "build/Microsoft.Net.UWPCoreRuntimeSdk.props": {}
@@ -47,12 +47,12 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.NETCore.UniversalWindowsPlatform/6.2.7": {
+      "Microsoft.NETCore.UniversalWindowsPlatform/6.2.8": {
         "type": "package",
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.1.0",
           "Microsoft.Net.Native.Compiler": "2.2.3",
-          "Microsoft.Net.UWPCoreRuntimeSdk": "2.2.7",
+          "Microsoft.Net.UWPCoreRuntimeSdk": "2.2.8",
           "NETStandard.Library": "2.0.3"
         },
         "compile": {
@@ -256,7 +256,7 @@
           "build/runtime.win10-arm.Microsoft.Net.Native.SharedLibrary.targets": {}
         }
       },
-      "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk/2.2.7": {
+      "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk/2.2.8": {
         "type": "package",
         "build": {
           "build/runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
@@ -297,7 +297,7 @@
           "build/runtime.win10-x64.Microsoft.Net.Native.SharedLibrary.targets": {}
         }
       },
-      "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk/2.2.7": {
+      "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk/2.2.8": {
         "type": "package",
         "build": {
           "build/runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
@@ -321,7 +321,7 @@
           "build/runtime.win10-x86.Microsoft.Net.Native.SharedLibrary.targets": {}
         }
       },
-      "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk/2.2.7": {
+      "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk/2.2.8": {
         "type": "package",
         "build": {
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
@@ -382,12 +382,12 @@
           "build/Microsoft.Net.Native.Compiler.targets": {}
         }
       },
-      "Microsoft.Net.UWPCoreRuntimeSdk/2.2.7": {
+      "Microsoft.Net.UWPCoreRuntimeSdk/2.2.8": {
         "type": "package",
         "dependencies": {
-          "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk": "2.2.7",
-          "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk": "2.2.7",
-          "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk": "2.2.7"
+          "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk": "2.2.8",
+          "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk": "2.2.8",
+          "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk": "2.2.8"
         },
         "build": {
           "build/Microsoft.Net.UWPCoreRuntimeSdk.props": {}
@@ -402,14 +402,14 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.NETCore.UniversalWindowsPlatform/6.2.7": {
+      "Microsoft.NETCore.UniversalWindowsPlatform/6.2.8": {
         "type": "package",
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.1.0",
           "Microsoft.Net.Native.Compiler": "2.2.3",
-          "Microsoft.Net.UWPCoreRuntimeSdk": "2.2.7",
+          "Microsoft.Net.UWPCoreRuntimeSdk": "2.2.8",
           "NETStandard.Library": "2.0.3",
-          "runtime.win10-arm.Microsoft.NETCore.UniversalWindowsPlatform": "6.2.7"
+          "runtime.win10-arm.Microsoft.NETCore.UniversalWindowsPlatform": "6.2.8"
         },
         "compile": {
           "ref/uap10.0.15138/Microsoft.CSharp.dll": {},
@@ -612,14 +612,14 @@
           "build/runtime.win10-arm.Microsoft.Net.Native.SharedLibrary.targets": {}
         }
       },
-      "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk/2.2.7": {
+      "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk/2.2.8": {
         "type": "package",
         "build": {
           "build/runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
-      "runtime.win10-arm.Microsoft.NETCore.UniversalWindowsPlatform/6.2.7": {
+      "runtime.win10-arm.Microsoft.NETCore.UniversalWindowsPlatform/6.2.8": {
         "type": "package",
         "compile": {
           "ref/netstandard/_._": {}
@@ -831,7 +831,7 @@
           "build/runtime.win10-x64.Microsoft.Net.Native.SharedLibrary.targets": {}
         }
       },
-      "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk/2.2.7": {
+      "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk/2.2.8": {
         "type": "package",
         "build": {
           "build/runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
@@ -855,7 +855,7 @@
           "build/runtime.win10-x86.Microsoft.Net.Native.SharedLibrary.targets": {}
         }
       },
-      "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk/2.2.7": {
+      "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk/2.2.8": {
         "type": "package",
         "build": {
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
@@ -916,12 +916,12 @@
           "build/Microsoft.Net.Native.Compiler.targets": {}
         }
       },
-      "Microsoft.Net.UWPCoreRuntimeSdk/2.2.7": {
+      "Microsoft.Net.UWPCoreRuntimeSdk/2.2.8": {
         "type": "package",
         "dependencies": {
-          "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk": "2.2.7",
-          "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk": "2.2.7",
-          "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk": "2.2.7"
+          "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk": "2.2.8",
+          "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk": "2.2.8",
+          "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk": "2.2.8"
         },
         "build": {
           "build/Microsoft.Net.UWPCoreRuntimeSdk.props": {}
@@ -936,14 +936,14 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.NETCore.UniversalWindowsPlatform/6.2.7": {
+      "Microsoft.NETCore.UniversalWindowsPlatform/6.2.8": {
         "type": "package",
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.1.0",
           "Microsoft.Net.Native.Compiler": "2.2.3",
-          "Microsoft.Net.UWPCoreRuntimeSdk": "2.2.7",
+          "Microsoft.Net.UWPCoreRuntimeSdk": "2.2.8",
           "NETStandard.Library": "2.0.3",
-          "runtime.win10-arm-aot.Microsoft.NETCore.UniversalWindowsPlatform": "6.2.7"
+          "runtime.win10-arm-aot.Microsoft.NETCore.UniversalWindowsPlatform": "6.2.8"
         },
         "compile": {
           "ref/uap10.0.15138/Microsoft.CSharp.dll": {},
@@ -1129,7 +1129,7 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
-      "runtime.win10-arm-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.2.7": {
+      "runtime.win10-arm-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.2.8": {
         "type": "package",
         "compile": {
           "ref/netstandard/_._": {}
@@ -1325,7 +1325,7 @@
           "build/runtime.win10-arm.Microsoft.Net.Native.SharedLibrary.targets": {}
         }
       },
-      "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk/2.2.7": {
+      "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk/2.2.8": {
         "type": "package",
         "build": {
           "build/runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
@@ -1366,7 +1366,7 @@
           "build/runtime.win10-x64.Microsoft.Net.Native.SharedLibrary.targets": {}
         }
       },
-      "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk/2.2.7": {
+      "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk/2.2.8": {
         "type": "package",
         "build": {
           "build/runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
@@ -1390,7 +1390,7 @@
           "build/runtime.win10-x86.Microsoft.Net.Native.SharedLibrary.targets": {}
         }
       },
-      "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk/2.2.7": {
+      "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk/2.2.8": {
         "type": "package",
         "build": {
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
@@ -1451,12 +1451,12 @@
           "build/Microsoft.Net.Native.Compiler.targets": {}
         }
       },
-      "Microsoft.Net.UWPCoreRuntimeSdk/2.2.7": {
+      "Microsoft.Net.UWPCoreRuntimeSdk/2.2.8": {
         "type": "package",
         "dependencies": {
-          "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk": "2.2.7",
-          "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk": "2.2.7",
-          "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk": "2.2.7"
+          "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk": "2.2.8",
+          "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk": "2.2.8",
+          "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk": "2.2.8"
         },
         "build": {
           "build/Microsoft.Net.UWPCoreRuntimeSdk.props": {}
@@ -1471,14 +1471,14 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.NETCore.UniversalWindowsPlatform/6.2.7": {
+      "Microsoft.NETCore.UniversalWindowsPlatform/6.2.8": {
         "type": "package",
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.1.0",
           "Microsoft.Net.Native.Compiler": "2.2.3",
-          "Microsoft.Net.UWPCoreRuntimeSdk": "2.2.7",
+          "Microsoft.Net.UWPCoreRuntimeSdk": "2.2.8",
           "NETStandard.Library": "2.0.3",
-          "runtime.win10-arm64-aot.Microsoft.NETCore.UniversalWindowsPlatform": "6.2.7"
+          "runtime.win10-arm64-aot.Microsoft.NETCore.UniversalWindowsPlatform": "6.2.8"
         },
         "compile": {
           "ref/uap10.0.15138/Microsoft.CSharp.dll": {},
@@ -1681,14 +1681,14 @@
           "build/runtime.win10-arm.Microsoft.Net.Native.SharedLibrary.targets": {}
         }
       },
-      "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk/2.2.7": {
+      "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk/2.2.8": {
         "type": "package",
         "build": {
           "build/runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
-      "runtime.win10-arm64-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.2.7": {
+      "runtime.win10-arm64-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.2.8": {
         "type": "package",
         "compile": {
           "ref/netstandard/_._": {}
@@ -1901,7 +1901,7 @@
           "build/runtime.win10-x64.Microsoft.Net.Native.SharedLibrary.targets": {}
         }
       },
-      "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk/2.2.7": {
+      "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk/2.2.8": {
         "type": "package",
         "build": {
           "build/runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
@@ -1925,7 +1925,7 @@
           "build/runtime.win10-x86.Microsoft.Net.Native.SharedLibrary.targets": {}
         }
       },
-      "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk/2.2.7": {
+      "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk/2.2.8": {
         "type": "package",
         "build": {
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
@@ -1986,12 +1986,12 @@
           "build/Microsoft.Net.Native.Compiler.targets": {}
         }
       },
-      "Microsoft.Net.UWPCoreRuntimeSdk/2.2.7": {
+      "Microsoft.Net.UWPCoreRuntimeSdk/2.2.8": {
         "type": "package",
         "dependencies": {
-          "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk": "2.2.7",
-          "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk": "2.2.7",
-          "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk": "2.2.7"
+          "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk": "2.2.8",
+          "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk": "2.2.8",
+          "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk": "2.2.8"
         },
         "build": {
           "build/Microsoft.Net.UWPCoreRuntimeSdk.props": {}
@@ -2006,14 +2006,14 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.NETCore.UniversalWindowsPlatform/6.2.7": {
+      "Microsoft.NETCore.UniversalWindowsPlatform/6.2.8": {
         "type": "package",
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.1.0",
           "Microsoft.Net.Native.Compiler": "2.2.3",
-          "Microsoft.Net.UWPCoreRuntimeSdk": "2.2.7",
+          "Microsoft.Net.UWPCoreRuntimeSdk": "2.2.8",
           "NETStandard.Library": "2.0.3",
-          "runtime.win10-x64.Microsoft.NETCore.UniversalWindowsPlatform": "6.2.7"
+          "runtime.win10-x64.Microsoft.NETCore.UniversalWindowsPlatform": "6.2.8"
         },
         "compile": {
           "ref/uap10.0.15138/Microsoft.CSharp.dll": {},
@@ -2216,7 +2216,7 @@
           "build/runtime.win10-arm.Microsoft.Net.Native.SharedLibrary.targets": {}
         }
       },
-      "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk/2.2.7": {
+      "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk/2.2.8": {
         "type": "package",
         "build": {
           "build/runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
@@ -2257,14 +2257,14 @@
           "build/runtime.win10-x64.Microsoft.Net.Native.SharedLibrary.targets": {}
         }
       },
-      "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk/2.2.7": {
+      "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk/2.2.8": {
         "type": "package",
         "build": {
           "build/runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
-      "runtime.win10-x64.Microsoft.NETCore.UniversalWindowsPlatform/6.2.7": {
+      "runtime.win10-x64.Microsoft.NETCore.UniversalWindowsPlatform/6.2.8": {
         "type": "package",
         "compile": {
           "ref/netstandard/_._": {}
@@ -2459,7 +2459,7 @@
           "build/runtime.win10-x86.Microsoft.Net.Native.SharedLibrary.targets": {}
         }
       },
-      "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk/2.2.7": {
+      "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk/2.2.8": {
         "type": "package",
         "build": {
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
@@ -2520,12 +2520,12 @@
           "build/Microsoft.Net.Native.Compiler.targets": {}
         }
       },
-      "Microsoft.Net.UWPCoreRuntimeSdk/2.2.7": {
+      "Microsoft.Net.UWPCoreRuntimeSdk/2.2.8": {
         "type": "package",
         "dependencies": {
-          "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk": "2.2.7",
-          "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk": "2.2.7",
-          "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk": "2.2.7"
+          "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk": "2.2.8",
+          "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk": "2.2.8",
+          "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk": "2.2.8"
         },
         "build": {
           "build/Microsoft.Net.UWPCoreRuntimeSdk.props": {}
@@ -2540,14 +2540,14 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.NETCore.UniversalWindowsPlatform/6.2.7": {
+      "Microsoft.NETCore.UniversalWindowsPlatform/6.2.8": {
         "type": "package",
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.1.0",
           "Microsoft.Net.Native.Compiler": "2.2.3",
-          "Microsoft.Net.UWPCoreRuntimeSdk": "2.2.7",
+          "Microsoft.Net.UWPCoreRuntimeSdk": "2.2.8",
           "NETStandard.Library": "2.0.3",
-          "runtime.win10-x64-aot.Microsoft.NETCore.UniversalWindowsPlatform": "6.2.7"
+          "runtime.win10-x64-aot.Microsoft.NETCore.UniversalWindowsPlatform": "6.2.8"
         },
         "compile": {
           "ref/uap10.0.15138/Microsoft.CSharp.dll": {},
@@ -2750,7 +2750,7 @@
           "build/runtime.win10-arm.Microsoft.Net.Native.SharedLibrary.targets": {}
         }
       },
-      "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk/2.2.7": {
+      "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk/2.2.8": {
         "type": "package",
         "build": {
           "build/runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
@@ -2774,7 +2774,7 @@
           "build/runtime.win10-arm64.Microsoft.Net.Native.SharedLibrary.targets": {}
         }
       },
-      "runtime.win10-x64-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.2.7": {
+      "runtime.win10-x64-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.2.8": {
         "type": "package",
         "compile": {
           "ref/netstandard/_._": {}
@@ -2970,7 +2970,7 @@
           "build/runtime.win10-x64.Microsoft.Net.Native.SharedLibrary.targets": {}
         }
       },
-      "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk/2.2.7": {
+      "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk/2.2.8": {
         "type": "package",
         "build": {
           "build/runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
@@ -2994,7 +2994,7 @@
           "build/runtime.win10-x86.Microsoft.Net.Native.SharedLibrary.targets": {}
         }
       },
-      "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk/2.2.7": {
+      "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk/2.2.8": {
         "type": "package",
         "build": {
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
@@ -3055,12 +3055,12 @@
           "build/Microsoft.Net.Native.Compiler.targets": {}
         }
       },
-      "Microsoft.Net.UWPCoreRuntimeSdk/2.2.7": {
+      "Microsoft.Net.UWPCoreRuntimeSdk/2.2.8": {
         "type": "package",
         "dependencies": {
-          "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk": "2.2.7",
-          "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk": "2.2.7",
-          "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk": "2.2.7"
+          "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk": "2.2.8",
+          "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk": "2.2.8",
+          "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk": "2.2.8"
         },
         "build": {
           "build/Microsoft.Net.UWPCoreRuntimeSdk.props": {}
@@ -3075,14 +3075,14 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.NETCore.UniversalWindowsPlatform/6.2.7": {
+      "Microsoft.NETCore.UniversalWindowsPlatform/6.2.8": {
         "type": "package",
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.1.0",
           "Microsoft.Net.Native.Compiler": "2.2.3",
-          "Microsoft.Net.UWPCoreRuntimeSdk": "2.2.7",
+          "Microsoft.Net.UWPCoreRuntimeSdk": "2.2.8",
           "NETStandard.Library": "2.0.3",
-          "runtime.win10-x86.Microsoft.NETCore.UniversalWindowsPlatform": "6.2.7"
+          "runtime.win10-x86.Microsoft.NETCore.UniversalWindowsPlatform": "6.2.8"
         },
         "compile": {
           "ref/uap10.0.15138/Microsoft.CSharp.dll": {},
@@ -3285,7 +3285,7 @@
           "build/runtime.win10-arm.Microsoft.Net.Native.SharedLibrary.targets": {}
         }
       },
-      "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk/2.2.7": {
+      "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk/2.2.8": {
         "type": "package",
         "build": {
           "build/runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
@@ -3326,7 +3326,7 @@
           "build/runtime.win10-x64.Microsoft.Net.Native.SharedLibrary.targets": {}
         }
       },
-      "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk/2.2.7": {
+      "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk/2.2.8": {
         "type": "package",
         "build": {
           "build/runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
@@ -3350,14 +3350,14 @@
           "build/runtime.win10-x86.Microsoft.Net.Native.SharedLibrary.targets": {}
         }
       },
-      "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk/2.2.7": {
+      "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk/2.2.8": {
         "type": "package",
         "build": {
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
-      "runtime.win10-x86.Microsoft.NETCore.UniversalWindowsPlatform/6.2.7": {
+      "runtime.win10-x86.Microsoft.NETCore.UniversalWindowsPlatform/6.2.8": {
         "type": "package",
         "compile": {
           "ref/netstandard/_._": {}
@@ -3589,12 +3589,12 @@
           "build/Microsoft.Net.Native.Compiler.targets": {}
         }
       },
-      "Microsoft.Net.UWPCoreRuntimeSdk/2.2.7": {
+      "Microsoft.Net.UWPCoreRuntimeSdk/2.2.8": {
         "type": "package",
         "dependencies": {
-          "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk": "2.2.7",
-          "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk": "2.2.7",
-          "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk": "2.2.7"
+          "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk": "2.2.8",
+          "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk": "2.2.8",
+          "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk": "2.2.8"
         },
         "build": {
           "build/Microsoft.Net.UWPCoreRuntimeSdk.props": {}
@@ -3609,14 +3609,14 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.NETCore.UniversalWindowsPlatform/6.2.7": {
+      "Microsoft.NETCore.UniversalWindowsPlatform/6.2.8": {
         "type": "package",
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.1.0",
           "Microsoft.Net.Native.Compiler": "2.2.3",
-          "Microsoft.Net.UWPCoreRuntimeSdk": "2.2.7",
+          "Microsoft.Net.UWPCoreRuntimeSdk": "2.2.8",
           "NETStandard.Library": "2.0.3",
-          "runtime.win10-x86-aot.Microsoft.NETCore.UniversalWindowsPlatform": "6.2.7"
+          "runtime.win10-x86-aot.Microsoft.NETCore.UniversalWindowsPlatform": "6.2.8"
         },
         "compile": {
           "ref/uap10.0.15138/Microsoft.CSharp.dll": {},
@@ -3819,7 +3819,7 @@
           "build/runtime.win10-arm.Microsoft.Net.Native.SharedLibrary.targets": {}
         }
       },
-      "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk/2.2.7": {
+      "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk/2.2.8": {
         "type": "package",
         "build": {
           "build/runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
@@ -3860,14 +3860,14 @@
           "build/runtime.win10-x64.Microsoft.Net.Native.SharedLibrary.targets": {}
         }
       },
-      "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk/2.2.7": {
+      "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk/2.2.8": {
         "type": "package",
         "build": {
           "build/runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
-      "runtime.win10-x86-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.2.7": {
+      "runtime.win10-x86-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.2.8": {
         "type": "package",
         "compile": {
           "ref/netstandard/_._": {}
@@ -4063,7 +4063,7 @@
           "build/runtime.win10-x86.Microsoft.Net.Native.SharedLibrary.targets": {}
         }
       },
-      "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk/2.2.7": {
+      "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk/2.2.8": {
         "type": "package",
         "build": {
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
@@ -4115,7 +4115,7 @@
       ]
     },
     "Microsoft.Net.Native.Compiler/2.2.3": {
-      "sha512": "OrwLaq/R6v8c31p+tkkRqI40fxL12vTcgGWkiXX6oOGKRr/1ybc+UYJztDt52D/5Iwfl/zdyvj/Q3b8YsRujIA==",
+      "sha512": "gY/ksTbfZCB00oBIGXyY9+vcfpNMvOmbSw0lmalj0ew6Yjw4kRn3bOyZ7jvTY0n43yopWxxBaWesGTQcAusntg==",
       "type": "package",
       "path": "microsoft.net.native.compiler/2.2.3",
       "hasTools": true,
@@ -4168,10 +4168,10 @@
         "tools/csc/mrt150.dll"
       ]
     },
-    "Microsoft.Net.UWPCoreRuntimeSdk/2.2.7": {
-      "sha512": "F93/pr7I//Kjd1y0J6qGSsy+Jise83eYDnAp3Y6FUbXd8TafZUJoXbllhzyXvKqsRAnUaCZmt9n6DUNrdPnPJw==",
+    "Microsoft.Net.UWPCoreRuntimeSdk/2.2.8": {
+      "sha512": "44fZytV0pr3G7vcNB5WCMoYQk3akkfxWNoDzSZqflTnWoNYgl8exlnpQaMkmgUABpP4gD4vY/S2kcpRTncGKdQ==",
       "type": "package",
-      "path": "microsoft.net.uwpcoreruntimesdk/2.2.7",
+      "path": "microsoft.net.uwpcoreruntimesdk/2.2.8",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -4179,7 +4179,7 @@
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "build/Microsoft.Net.UWPCoreRuntimeSdk.props",
-        "microsoft.net.uwpcoreruntimesdk.2.2.7.nupkg.sha512",
+        "microsoft.net.uwpcoreruntimesdk.2.2.8.nupkg.sha512",
         "microsoft.net.uwpcoreruntimesdk.nuspec",
         "tools/CoreRuntime/Microsoft.Build.Net.CoreRuntimeTask.dll",
         "tools/CoreRuntime/Microsoft.Cci.dll",
@@ -4204,10 +4204,10 @@
         "version.txt"
       ]
     },
-    "Microsoft.NETCore.UniversalWindowsPlatform/6.2.7": {
-      "sha512": "scJlySQBluQP/KsuGJmptmBZ9dxmIkBDfeGMSle7vB7i/pgumi5nrtecPSypOXp26mC2rD8u7SxWoVwnPMKS3w==",
+    "Microsoft.NETCore.UniversalWindowsPlatform/6.2.8": {
+      "sha512": "Ca8F9Sran31PKlPmoAdUAKEWPAWrj8Xn3kjpTCXPh2KAzcFlmn1cBcBb4cifUsTuf9XCi8+6FA48O3J62xVApw==",
       "type": "package",
-      "path": "microsoft.netcore.universalwindowsplatform/6.2.7",
+      "path": "microsoft.netcore.universalwindowsplatform/6.2.8",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4215,7 +4215,7 @@
         "THIRD-PARTY-NOTICES.TXT",
         "build/Microsoft.NETCore.UniversalWindowsPlatform.props",
         "build/Microsoft.NetCore.UniversalWindowsPlatform.targets",
-        "microsoft.netcore.universalwindowsplatform.6.2.7.nupkg.sha512",
+        "microsoft.netcore.universalwindowsplatform.6.2.8.nupkg.sha512",
         "microsoft.netcore.universalwindowsplatform.nuspec",
         "ref/netcore50/_._",
         "ref/uap10.0.15138/Microsoft.CSharp.dll",
@@ -4653,17 +4653,17 @@
         "newtonsoft.json.nuspec"
       ]
     },
-    "runtime.win10-arm-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.2.7": {
-      "sha512": "671OehkoWiVdz78kyQu0shu67CmTsg3HCeVjS/YLiXYqFF6fHFF4G9nB/3dg/3kfHVayj5hmSYupnSKqXXnM4w==",
+    "runtime.win10-arm-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.2.8": {
+      "sha512": "9/HmymcDoEdwWCMynAyYiqMjeOcw9JBtP+2s6rsepQaa/DI+EqFpJQP9B75zXTZifiLd4r+Iv0cedMkClPKa2A==",
       "type": "package",
-      "path": "runtime.win10-arm-aot.microsoft.netcore.universalwindowsplatform/6.2.7",
+      "path": "runtime.win10-arm-aot.microsoft.netcore.universalwindowsplatform/6.2.8",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "ref/netstandard/_._",
-        "runtime.win10-arm-aot.microsoft.netcore.universalwindowsplatform.6.2.7.nupkg.sha512",
+        "runtime.win10-arm-aot.microsoft.netcore.universalwindowsplatform.6.2.8.nupkg.sha512",
         "runtime.win10-arm-aot.microsoft.netcore.universalwindowsplatform.nuspec",
         "runtimes/win10-arm-aot/lib/uap10.0.15138/Microsoft.CSharp.dll",
         "runtimes/win10-arm-aot/lib/uap10.0.15138/Microsoft.VisualBasic.dll",
@@ -4837,7 +4837,7 @@
       ]
     },
     "runtime.win10-arm.Microsoft.Net.Native.Compiler/2.2.3": {
-      "sha512": "1ECYkxOPA07MiN2u7r6ITv38sdrJdlTbxPPhGwG5c+n7UyTn+zjBYMreO/fa508vDaHovc8nl1skVQXxkMCmSg==",
+      "sha512": "26bk91kdrCRu2AyVr89JLcChYVlmjVhzDkdfgjzGvcxMfP7R2YgUYwChAOr83LK3uymw0GIGUL2X1M76mrPX2A==",
       "type": "package",
       "path": "runtime.win10-arm.microsoft.net.native.compiler/2.2.3",
       "hasTools": true,
@@ -5136,7 +5136,7 @@
       ]
     },
     "runtime.win10-arm.Microsoft.Net.Native.SharedLibrary/2.2.3": {
-      "sha512": "UWIOoaSAUQa50m0WILzNudXTXPpt/WF/yjvmAuA/1iKSR02As2aMGBYwi2stxXa0RE6YiVaT2+wbxug1lgx33w==",
+      "sha512": "uOFR+/pJt7Umh26bHklerwIOGUXbNaIrBfe/TIqdl+Fm13LiX58vhc2cJeDIIp821hqyZ6DkciIGFpRhJ8CPmA==",
       "type": "package",
       "path": "runtime.win10-arm.microsoft.net.native.sharedlibrary/2.2.3",
       "hasTools": true,
@@ -5513,10 +5513,10 @@
         "tools/SharedLibrary/ret/Toc/System.Threading.toc"
       ]
     },
-    "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk/2.2.7": {
-      "sha512": "CS0nhvlkJH/qQowC8DeMBgtJbUmCbMwQIY2GD6cv8Moa44owa7aaiuTb1Ebj8VaJ10OeEWwkQJ6sKnB9WLB4Bg==",
+    "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk/2.2.8": {
+      "sha512": "jK5srufvJtKen3aNsYd+cb+i9Z7kuLQRIwu77RLMPxOsRbAbbWsrXu+eH+izDL4ifZvWzi51ho9RrE7myisBeA==",
       "type": "package",
-      "path": "runtime.win10-arm.microsoft.net.uwpcoreruntimesdk/2.2.7",
+      "path": "runtime.win10-arm.microsoft.net.uwpcoreruntimesdk/2.2.8",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -5525,7 +5525,7 @@
         "THIRD-PARTY-NOTICES.TXT",
         "build/runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk.props",
         "build/runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk.targets",
-        "runtime.win10-arm.microsoft.net.uwpcoreruntimesdk.2.2.7.nupkg.sha512",
+        "runtime.win10-arm.microsoft.net.uwpcoreruntimesdk.2.2.8.nupkg.sha512",
         "runtime.win10-arm.microsoft.net.uwpcoreruntimesdk.nuspec",
         "tools/AppLocal/consoleuwpshim.exe",
         "tools/AppLocal/uwpshim.exe",
@@ -5534,17 +5534,17 @@
         "tools/CoreRuntime/copywin32resources.exe"
       ]
     },
-    "runtime.win10-arm.Microsoft.NETCore.UniversalWindowsPlatform/6.2.7": {
-      "sha512": "/bHM+NYiBrFMursdbMLDGGrNG52QB1kDdnoJ9j9wJVCc9NhuWGZJaZuGW6uNzLP4HY7xqRZdFBC6ZhM8SPhzzQ==",
+    "runtime.win10-arm.Microsoft.NETCore.UniversalWindowsPlatform/6.2.8": {
+      "sha512": "gVBtcw4SC8ZnERsg0dX3ckngtFW7ADf5Tv7bjxiV6k3I0LLGjdTmxqTCb0STsg1nOxOwdUxZNg4qhxAL59B42g==",
       "type": "package",
-      "path": "runtime.win10-arm.microsoft.netcore.universalwindowsplatform/6.2.7",
+      "path": "runtime.win10-arm.microsoft.netcore.universalwindowsplatform/6.2.8",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "ref/netstandard/_._",
-        "runtime.win10-arm.microsoft.netcore.universalwindowsplatform.6.2.7.nupkg.sha512",
+        "runtime.win10-arm.microsoft.netcore.universalwindowsplatform.6.2.8.nupkg.sha512",
         "runtime.win10-arm.microsoft.netcore.universalwindowsplatform.nuspec",
         "runtimes/win10-arm/lib/uap10.0.15138/Microsoft.CSharp.dll",
         "runtimes/win10-arm/lib/uap10.0.15138/Microsoft.VisualBasic.dll",
@@ -5716,17 +5716,17 @@
         "runtimes/win10-arm/nativeassets/uap10.0.15138/clrcompression.dll"
       ]
     },
-    "runtime.win10-arm64-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.2.7": {
-      "sha512": "ZPSPn5MDEJYO4XJChAD0QY2Z5c+bShfbzj4ZU+KyorF2MVWeZlQ9nramq6HyyUwMBzZni19AO3jYlJD1TUWO1A==",
+    "runtime.win10-arm64-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.2.8": {
+      "sha512": "QMjdoZimyzQjM9XDGLLjHPNHtWtOkuOaC+Z0UC9j7ZhaABXyBrIwCQ+FNF8tAb1dIgxmK/BtgYPEzchCCBbriA==",
       "type": "package",
-      "path": "runtime.win10-arm64-aot.microsoft.netcore.universalwindowsplatform/6.2.7",
+      "path": "runtime.win10-arm64-aot.microsoft.netcore.universalwindowsplatform/6.2.8",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "ref/netstandard/_._",
-        "runtime.win10-arm64-aot.microsoft.netcore.universalwindowsplatform.6.2.7.nupkg.sha512",
+        "runtime.win10-arm64-aot.microsoft.netcore.universalwindowsplatform.6.2.8.nupkg.sha512",
         "runtime.win10-arm64-aot.microsoft.netcore.universalwindowsplatform.nuspec",
         "runtimes/win10-arm64-aot/lib/uap10.0.15138/Microsoft.CSharp.dll",
         "runtimes/win10-arm64-aot/lib/uap10.0.15138/Microsoft.VisualBasic.dll",
@@ -5900,7 +5900,7 @@
       ]
     },
     "runtime.win10-arm64.Microsoft.Net.Native.Compiler/2.2.3": {
-      "sha512": "pRBvWThWu2rs8sZI1LeAGoKu/F2Ntf/WHKotINJzetWATDqjDKaUA/9XzrFFOGeOwATuv5Q3k0CuKQA35OSEtw==",
+      "sha512": "VPlKZvbNbdX/oWIQxh7U3y+w4k7eMBj8eqYL+BF1AdcXbisNyLeEOtBwDpZZrwwJZztiQ0WLSzbkLEuZGoTbAA==",
       "type": "package",
       "path": "runtime.win10-arm64.microsoft.net.native.compiler/2.2.3",
       "hasTools": true,
@@ -6078,7 +6078,7 @@
       ]
     },
     "runtime.win10-arm64.Microsoft.Net.Native.SharedLibrary/2.2.3": {
-      "sha512": "M1s/KnxEPV+8GkCAumHyrWzXN2i1pSMXvnULeZB07MCw2W26b7nidRD6phM02iamNh/NvzkTUK9LKQCeIwq6uA==",
+      "sha512": "nLt0gIS43aEDxDW2mS+rrxORNukr2MjaEi5F1lrhZqK/v1Y17H6ML+vZoy9f61aHIEJ3a+TrBS2HBREa0JmWjA==",
       "type": "package",
       "path": "runtime.win10-arm64.microsoft.net.native.sharedlibrary/2.2.3",
       "hasTools": true,
@@ -6457,17 +6457,17 @@
         "tools/SharedLibrary/ret/Toc/System.Threading.toc"
       ]
     },
-    "runtime.win10-x64-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.2.7": {
-      "sha512": "JfSkaYU9od49oGDC4i0i2lfDX3GnxtW5qEh0lyycZGBWNwVkeHsXKGt7k4u7fBlcl7asitjqrTKWr1POmls4aQ==",
+    "runtime.win10-x64-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.2.8": {
+      "sha512": "lHdH8LXmt/b5SlijBCc6dIsAvx+Sko2mDu/moEyut7wdbcMYqX8ey3OwZ0v+Bag0Qzi/oQEtKPAcETa2XhVaZA==",
       "type": "package",
-      "path": "runtime.win10-x64-aot.microsoft.netcore.universalwindowsplatform/6.2.7",
+      "path": "runtime.win10-x64-aot.microsoft.netcore.universalwindowsplatform/6.2.8",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "ref/netstandard/_._",
-        "runtime.win10-x64-aot.microsoft.netcore.universalwindowsplatform.6.2.7.nupkg.sha512",
+        "runtime.win10-x64-aot.microsoft.netcore.universalwindowsplatform.6.2.8.nupkg.sha512",
         "runtime.win10-x64-aot.microsoft.netcore.universalwindowsplatform.nuspec",
         "runtimes/win10-x64-aot/lib/uap10.0.15138/Microsoft.CSharp.dll",
         "runtimes/win10-x64-aot/lib/uap10.0.15138/Microsoft.VisualBasic.dll",
@@ -6641,7 +6641,7 @@
       ]
     },
     "runtime.win10-x64.Microsoft.Net.Native.Compiler/2.2.3": {
-      "sha512": "n6rDsZEJFL+Ivmt2bKr/WoxcaNljvHXsShqU/YweLsXy5MXQGI79qkuBzVw5kzC93/r8ZlFhkmmJbIxz5TlSQA==",
+      "sha512": "Q2fug+oB2XouUS3px0gTj3FMRNqH/phKpsleF4r0XxIvkgVb2uwKGEQuJxNK7reGOkoHLTywmOhEzK3T1vHWpA==",
       "type": "package",
       "path": "runtime.win10-x64.microsoft.net.native.compiler/2.2.3",
       "hasTools": true,
@@ -6934,7 +6934,7 @@
       ]
     },
     "runtime.win10-x64.Microsoft.Net.Native.SharedLibrary/2.2.3": {
-      "sha512": "YCdb9g+ZeSOnjJV3LTMO3L3PMDO1qI1QV+XgN0DHFNgRuXAtDHqcJY2UszChHtAizYRDT/jQDZdXW+Fot6B7XA==",
+      "sha512": "fMh4rdxMCEn231IrJcGw1efdvbqgZDHof/QUMZk18sMyXRfbYOv3thHeDVUqm7BVv++j2dN+9tahf9QV38aQZw==",
       "type": "package",
       "path": "runtime.win10-x64.microsoft.net.native.sharedlibrary/2.2.3",
       "hasTools": true,
@@ -7311,10 +7311,10 @@
         "tools/SharedLibrary/ret/Toc/System.Threading.toc"
       ]
     },
-    "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk/2.2.7": {
-      "sha512": "OGXINO7thxy3UJ0ay72zmZaxqOegPum8+6DjMMUnY97OifbpZdXopYQlI2M0Tg2X7bMK3ImdWmAjqdW3m1R/Dw==",
+    "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk/2.2.8": {
+      "sha512": "UD6rvYtYP5CB8depBGrSjm06ci7C49WnvWyBvjN0p2S1G2Cxj44LEgAUsxkNyJa6VHaCyhpRkyPj9jOhFrBrAg==",
       "type": "package",
-      "path": "runtime.win10-x64.microsoft.net.uwpcoreruntimesdk/2.2.7",
+      "path": "runtime.win10-x64.microsoft.net.uwpcoreruntimesdk/2.2.8",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -7323,7 +7323,7 @@
         "THIRD-PARTY-NOTICES.TXT",
         "build/runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk.props",
         "build/runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk.targets",
-        "runtime.win10-x64.microsoft.net.uwpcoreruntimesdk.2.2.7.nupkg.sha512",
+        "runtime.win10-x64.microsoft.net.uwpcoreruntimesdk.2.2.8.nupkg.sha512",
         "runtime.win10-x64.microsoft.net.uwpcoreruntimesdk.nuspec",
         "tools/AppLocal/consoleuwpshim.exe",
         "tools/AppLocal/uwpshim.exe",
@@ -7332,17 +7332,17 @@
         "tools/CoreRuntime/copywin32resources.exe"
       ]
     },
-    "runtime.win10-x64.Microsoft.NETCore.UniversalWindowsPlatform/6.2.7": {
-      "sha512": "ULwKaAzMauKWiO1UkrYLFn+NFRk/+VvQBmPVR6kAAvATYXurmQ+fPk4mE1uC+RwrY0hqJK4ZWJ8K0OT3FqtHuA==",
+    "runtime.win10-x64.Microsoft.NETCore.UniversalWindowsPlatform/6.2.8": {
+      "sha512": "OhqoWvyXCn61OLQ41wsVoYhc/4Ezd5hPIleSsCx3F3+rQLV55sTFhXuE+i+2F7SBtcLTO7UxSfTVfUlfE56BCQ==",
       "type": "package",
-      "path": "runtime.win10-x64.microsoft.netcore.universalwindowsplatform/6.2.7",
+      "path": "runtime.win10-x64.microsoft.netcore.universalwindowsplatform/6.2.8",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "ref/netstandard/_._",
-        "runtime.win10-x64.microsoft.netcore.universalwindowsplatform.6.2.7.nupkg.sha512",
+        "runtime.win10-x64.microsoft.netcore.universalwindowsplatform.6.2.8.nupkg.sha512",
         "runtime.win10-x64.microsoft.netcore.universalwindowsplatform.nuspec",
         "runtimes/win10-x64/lib/uap10.0.15138/Microsoft.CSharp.dll",
         "runtimes/win10-x64/lib/uap10.0.15138/Microsoft.VisualBasic.dll",
@@ -7514,17 +7514,17 @@
         "runtimes/win10-x64/nativeassets/uap10.0.15138/clrcompression.dll"
       ]
     },
-    "runtime.win10-x86-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.2.7": {
-      "sha512": "gJvS10eoFgVFKUNPrUWXK+h+s1Nb54YPyEbuC0L5EC05OkZmDJ+3O8lOTQ4skmhYa7h1OyA8U40qFVGnqt85hg==",
+    "runtime.win10-x86-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.2.8": {
+      "sha512": "nxlybzt8OTKigvRsd5ls8S+ATWJHxBKXKUl/IpomKHKK3HBmaNR5nHlaE+Lzp5TzD7r7jbzulLhLIHFH7za7qw==",
       "type": "package",
-      "path": "runtime.win10-x86-aot.microsoft.netcore.universalwindowsplatform/6.2.7",
+      "path": "runtime.win10-x86-aot.microsoft.netcore.universalwindowsplatform/6.2.8",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "ref/netstandard/_._",
-        "runtime.win10-x86-aot.microsoft.netcore.universalwindowsplatform.6.2.7.nupkg.sha512",
+        "runtime.win10-x86-aot.microsoft.netcore.universalwindowsplatform.6.2.8.nupkg.sha512",
         "runtime.win10-x86-aot.microsoft.netcore.universalwindowsplatform.nuspec",
         "runtimes/win10-x86-aot/lib/uap10.0.15138/Microsoft.CSharp.dll",
         "runtimes/win10-x86-aot/lib/uap10.0.15138/Microsoft.VisualBasic.dll",
@@ -7698,7 +7698,7 @@
       ]
     },
     "runtime.win10-x86.Microsoft.Net.Native.Compiler/2.2.3": {
-      "sha512": "JJjs5zZjcERJdGTCCKjpNO5UoAB+BtrY+gyD+8mt15Nqr0Gkxh7not6UL7g3LbzH8J84D28HC/aKB0HuTPV0EQ==",
+      "sha512": "LEqVUkB5JKPUatE73OB2epKNscsG7aqvpxr8rVSV8slsm3VW8DvHE/aXVXpl2AoOTzA16W3o4yB/mnalylKDeQ==",
       "type": "package",
       "path": "runtime.win10-x86.microsoft.net.native.compiler/2.2.3",
       "hasTools": true,
@@ -7991,7 +7991,7 @@
       ]
     },
     "runtime.win10-x86.Microsoft.Net.Native.SharedLibrary/2.2.3": {
-      "sha512": "pt9b6ygovbiRmJi7bx0mY3oSNPqyf7iu7dKWBJgzjCl7taZac8NapKT5V7zFSek36/Myjy0+b39MfpYbx5Zp5w==",
+      "sha512": "dYO/1+ZP+/i66Al4AaatEv4Ll5xgj6mdkRcZ+vEJkMbpabEzTvCRgnO850YHNFhP7WESzzy2R3kyGz4FCOcd7g==",
       "type": "package",
       "path": "runtime.win10-x86.microsoft.net.native.sharedlibrary/2.2.3",
       "hasTools": true,
@@ -8368,10 +8368,10 @@
         "tools/SharedLibrary/ret/Toc/System.Threading.toc"
       ]
     },
-    "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk/2.2.7": {
-      "sha512": "S+8unXVbdMJ4zeQLvkhM0ATV9YIg/sljo4KYwJNAh9MvaFFO7mVt82hXaHiFEZC6jZcansB+uJ7UOM4yo4PTXw==",
+    "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk/2.2.8": {
+      "sha512": "BmaWapZADIpxWCvTiME2Y4YURI7SR6kwDb5ur3SDtJUCjhfxF2s3d+wfCN0okhN0Tv8g2vBBO4LOgKhDN1iTWw==",
       "type": "package",
-      "path": "runtime.win10-x86.microsoft.net.uwpcoreruntimesdk/2.2.7",
+      "path": "runtime.win10-x86.microsoft.net.uwpcoreruntimesdk/2.2.8",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -8380,7 +8380,7 @@
         "THIRD-PARTY-NOTICES.TXT",
         "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props",
         "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets",
-        "runtime.win10-x86.microsoft.net.uwpcoreruntimesdk.2.2.7.nupkg.sha512",
+        "runtime.win10-x86.microsoft.net.uwpcoreruntimesdk.2.2.8.nupkg.sha512",
         "runtime.win10-x86.microsoft.net.uwpcoreruntimesdk.nuspec",
         "tools/AppLocal/consoleuwpshim.exe",
         "tools/AppLocal/uwpshim.exe",
@@ -8389,17 +8389,17 @@
         "tools/CoreRuntime/copywin32resources.exe"
       ]
     },
-    "runtime.win10-x86.Microsoft.NETCore.UniversalWindowsPlatform/6.2.7": {
-      "sha512": "vHXqb6vAH3yrq/aflIDYbWbMIMiFg+wzg5puvx9OTxJauIxZwV8ucgSHqXEdl8ancNj5IGD8MdEYPqcZjZCyLA==",
+    "runtime.win10-x86.Microsoft.NETCore.UniversalWindowsPlatform/6.2.8": {
+      "sha512": "vFrE1qxUfi7afk2cBpZ6z6wwWuBlRrIgPtYHswegPrZWMC04/gCjCIf5Owy33WWB5FHgOZQOu6pk4zYuKe1V8Q==",
       "type": "package",
-      "path": "runtime.win10-x86.microsoft.netcore.universalwindowsplatform/6.2.7",
+      "path": "runtime.win10-x86.microsoft.netcore.universalwindowsplatform/6.2.8",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "ref/netstandard/_._",
-        "runtime.win10-x86.microsoft.netcore.universalwindowsplatform.6.2.7.nupkg.sha512",
+        "runtime.win10-x86.microsoft.netcore.universalwindowsplatform.6.2.8.nupkg.sha512",
         "runtime.win10-x86.microsoft.netcore.universalwindowsplatform.nuspec",
         "runtimes/win10-x86/lib/uap10.0.15138/Microsoft.CSharp.dll",
         "runtimes/win10-x86/lib/uap10.0.15138/Microsoft.VisualBasic.dll",
@@ -9315,24 +9315,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mdp\\.nuget\\packages\\": {},
+    "C:\\Users\\kiddyuan\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Depp Data\\Study\\Pattern Recognition\\PatternRecoginitionProject\\PR\\PR\\PR.csproj",
+      "projectUniqueName": "C:\\Users\\kiddyuan\\Desktop\\PatternRecoginitionProject\\PR\\PR\\PR.csproj",
       "projectName": "PR",
-      "projectPath": "C:\\Depp Data\\Study\\Pattern Recognition\\PatternRecoginitionProject\\PR\\PR\\PR.csproj",
-      "packagesPath": "C:\\Users\\mdp\\.nuget\\packages\\",
-      "outputPath": "C:\\Depp Data\\Study\\Pattern Recognition\\PatternRecoginitionProject\\PR\\PR\\obj\\",
+      "projectPath": "C:\\Users\\kiddyuan\\Desktop\\PatternRecoginitionProject\\PR\\PR\\PR.csproj",
+      "packagesPath": "C:\\Users\\kiddyuan\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\kiddyuan\\Desktop\\PatternRecoginitionProject\\PR\\PR\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\mdp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\kiddyuan\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9398,5 +9398,24 @@
         "#import": []
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "PR 依赖于 Microsoft.NETCore.UniversalWindowsPlatform (>= 6.2.7)，但找不到 Microsoft.NETCore.UniversalWindowsPlatform 6.2.7。 已解决 Microsoft.NETCore.UniversalWindowsPlatform 6.2.8 的近似最佳匹配。 ",
+      "libraryId": "Microsoft.NETCore.UniversalWindowsPlatform",
+      "targetGraphs": [
+        "UAP,Version=v10.0.16299",
+        "UAP,Version=v10.0.16299/win10-arm",
+        "UAP,Version=v10.0.16299/win10-arm-aot",
+        "UAP,Version=v10.0.16299/win10-arm64-aot",
+        "UAP,Version=v10.0.16299/win10-x64",
+        "UAP,Version=v10.0.16299/win10-x64-aot",
+        "UAP,Version=v10.0.16299/win10-x86",
+        "UAP,Version=v10.0.16299/win10-x86-aot"
+      ]
+    }
+  ]
 }

@@ -1,1 +1,1 @@
-C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\PR.csproj;x86
+C:\Users\kiddyuan\Desktop\PatternRecoginitionProject\PR\PR\PR.csproj;x86
