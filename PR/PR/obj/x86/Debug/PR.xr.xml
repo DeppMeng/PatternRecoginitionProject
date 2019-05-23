@@ -70,10 +70,10 @@
       <RootProperty Name="Background" />
       <RootEvent Name="Click" />
     </RootType>
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension" />
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.BindExtension">
       <RootProperty Name="Mode" />
     </RootType>
-    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
       <RootProperty Name="Height" />
     </RootType>
@@ -91,32 +91,12 @@
     <RootType FullName="WinRTXamlToolkit.Controls.DataVisualization.Charting.Chart">
       <RootProperty Name="Height" />
       <RootProperty Name="Margin" />
-      <RootProperty Name="Palette" />
       <RootProperty Name="Series" />
-    </RootType>
-    <RootType FullName="WinRTXamlToolkit.Controls.DataVisualization.Charting.ResourceDictionaryCollection" />
-    <RootType FullName="Windows.UI.Xaml.ResourceDictionary" />
-    <RootType FullName="Windows.UI.Xaml.Media.SolidColorBrush">
-      <RootProperty Name="Color" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.Control">
-      <RootProperty Name="Background" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Shapes.Shape">
-      <RootProperty Name="Stroke" />
-      <RootProperty Name="StrokeThickness" />
-      <RootProperty Name="StrokeMiterLimit" />
-      <RootProperty Name="Fill" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Setter">
-      <RootProperty Name="Property" />
-      <RootProperty Name="Value" />
     </RootType>
     <RootType FullName="WinRTXamlToolkit.Controls.DataVisualization.Charting.ScatterSeries">
       <RootProperty Name="Title" />
       <RootProperty Name="IndependentValuePath" />
       <RootProperty Name="DependentValuePath" />
-      <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="ItemsSource" />
     </RootType>
     <RootType FullName="PR.MainPage" />
