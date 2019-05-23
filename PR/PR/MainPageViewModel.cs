@@ -31,64 +31,6 @@ namespace PR
             set { dataVis = value; OnPropertyChanged(); }
         }
 
-        //lzy
-        private ObservableCollection<Data4Vis> trainDataVis1 = new ObservableCollection<Data4Vis>();
-        public ObservableCollection<Data4Vis> TrainDataVis1
-        {
-            get => trainDataVis1;
-            set { trainDataVis1 = value; OnPropertyChanged(); }
-        }
-
-        private ObservableCollection<Data4Vis> trainDataVis2 = new ObservableCollection<Data4Vis>();
-        public ObservableCollection<Data4Vis> TrainDataVis2
-        {
-            get => trainDataVis2;
-            set { trainDataVis2 = value; OnPropertyChanged(); }
-        }
-
-        private ObservableCollection<Data4Vis> trainDataVis3 = new ObservableCollection<Data4Vis>();
-        public ObservableCollection<Data4Vis> TrainDataVis3
-        {
-            get => trainDataVis3;
-            set { trainDataVis3 = value; OnPropertyChanged(); }
-        }
-
-        private ObservableCollection<Data4Vis> trainDataVis4 = new ObservableCollection<Data4Vis>();
-        public ObservableCollection<Data4Vis> TrainDataVis4
-        {
-            get => trainDataVis4;
-            set { trainDataVis4 = value; OnPropertyChanged(); }
-        }
-
-        private ObservableCollection<Data4Vis> testDataVis1 = new ObservableCollection<Data4Vis>();
-        public ObservableCollection<Data4Vis> TestDataVis1
-        {
-            get => testDataVis1;
-            set { testDataVis1 = value; OnPropertyChanged(); }
-        }
-
-        private ObservableCollection<Data4Vis> testDataVis2 = new ObservableCollection<Data4Vis>();
-        public ObservableCollection<Data4Vis> TestDataVis2
-        {
-            get => testDataVis2;
-            set { testDataVis2 = value; OnPropertyChanged(); }
-        }
-
-        private ObservableCollection<Data4Vis> testDataVis3 = new ObservableCollection<Data4Vis>();
-        public ObservableCollection<Data4Vis> TestDataVis3
-        {
-            get => testDataVis3;
-            set { testDataVis3 = value; OnPropertyChanged(); }
-        }
-
-        private ObservableCollection<Data4Vis> testDataVis4 = new ObservableCollection<Data4Vis>();
-        public ObservableCollection<Data4Vis> TestDataVis4
-        {
-            get => testDataVis4;
-            set { testDataVis4 = value; OnPropertyChanged(); }
-        }
-        //lzy
-
         private int classifierSelectIndex = 0;
         public int ClassifierSelectIndex
         {
@@ -180,10 +122,6 @@ namespace PR
         string serverip = "127.0.0.1:5000";
         RecvData curr_recv_data = new RecvData();
 
-       
-
-
-
         //public void AddTrainData()
         //{
         //    Data tempdata = new Data();
@@ -253,10 +191,6 @@ namespace PR
             else
                 GenerateGaussianSample(testdatas, DataVis, list_center, NumSamplePerClass, Sigma);
             FormatDataDisplay();
-
-            //lzy
-            TrainDataClass(DataVis);
-            //lzy
         }
 
         public void ClearData()
@@ -425,60 +359,6 @@ namespace PR
 
             double y1 = Math.Sqrt(-2.0 * Math.Log(x1)) * Math.Cos(2.0 * Math.PI * x2);
             return y1 * stddev + mean;
-        }
-
-        public void TrainDataClass(ObservableCollection<Data4Vis> Data)
-        {
-            TrainDataVis1.Clear();
-            TrainDataVis2.Clear();
-            TrainDataVis3.Clear();
-            TrainDataVis4.Clear();
-            foreach (Data4Vis tempdata in Data)
-                switch (tempdata.label)
-                {
-                    case 0:
-                        TrainDataVis1.Add(tempdata);
-                        break;
-                    case 1:
-                        TrainDataVis2.Add(tempdata);
-                        break;
-                    case 2:
-                        TrainDataVis3.Add(tempdata);
-                        break;
-                    case 3:
-                        TrainDataVis4.Add(tempdata);
-                        break;
-                    default:
-
-                        break;
-                }                    
-        }
-
-        public void TestDataClass(ObservableCollection<Data4Vis> Data)
-        {
-            TestDataVis1.Clear();
-            TestDataVis2.Clear();
-            TestDataVis3.Clear();
-            TestDataVis4.Clear();
-            foreach (Data4Vis tempdata in Data)
-                switch (tempdata.label)
-                {
-                    case 0:
-                        TestDataVis1.Add(tempdata);
-                        break;
-                    case 1:
-                        TestDataVis2.Add(tempdata);
-                        break;
-                    case 2:
-                        TestDataVis3.Add(tempdata);
-                        break;
-                    case 3:
-                        TestDataVis4.Add(tempdata);
-                        break;
-                    default:
-
-                        break;
-                }
         }
 
         #endregion
