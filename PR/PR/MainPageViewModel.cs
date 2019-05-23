@@ -173,7 +173,7 @@ namespace PR
             for (int i = 0; i < NumClasses; i++)
             {
                 temp_center.x = i;
-                temp_center.y = i;
+                temp_center.y = i % 2;
                 temp_center.label = i;
                 list_center.Add(temp_center.Copy());
             }
@@ -235,6 +235,31 @@ namespace PR
             catch
             { }
 
+        }
+
+        public async void Scan()
+        {
+            Data tempdata = new Data();
+            SendData senddata = new SendData();
+            List<int> predictlabels = new List<int>();
+            for (int i = 0; i < 4 / 0.2; i++)
+                for (int j = 0; j < 3 / 0.2; j++)
+                {
+                    tempdata.x = 0.2 * i;
+                    tempdata.y = 0.2 * j;
+                    senddata.testdata.Add(tempdata.Copy());
+                }
+            senddata.request_type = "Predict";
+            senddata.classifiertype = ClassifierSelectIndex;
+
+            string send = JsonConvert.SerializeObject(senddata);
+            try
+            {
+                await SendInfo(send);
+                predictlabels = curr_recv_data.pred_labels;
+            }
+            catch
+            { }
         }
 
 

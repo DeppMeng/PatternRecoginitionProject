@@ -317,6 +317,12 @@
                                                        VerticalAlignment="Center">
                             </TextBlock>
                         </Grid>
+                        <Button Content="Scan Boundry"
+                                    Style="{StaticResource ButtonRevealStyle}"
+                                    HorizontalAlignment="Stretch"
+                                    Click="{x:Bind ViewModel.Scan}"
+                                    Margin="10">
+                        </Button>
                     </StackPanel>
                 </Grid>
             </PivotItem>

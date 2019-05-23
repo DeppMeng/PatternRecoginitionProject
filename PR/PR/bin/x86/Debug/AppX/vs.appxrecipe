@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-05-22T16:06:03.394</Modified>
+      <Modified>2019-05-23T11:55:32.494</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\bin\x86\Debug\PR.exe">
       <PackagePath>entrypoint\PR.exe</PackagePath>
-      <Modified>2019-05-22T16:06:02.746</Modified>
+      <Modified>2019-05-23T11:55:31.354</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mdp\.nuget\packages\meowtrix.universalclasslibrary\1.3.2\lib\netstandard1.3\Meowtrix.UniversalClassLibrary.dll">
       <PackagePath>Meowtrix.UniversalClassLibrary.dll</PackagePath>
@@ -106,11 +106,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-05-22T16:06:02.478</Modified>
+      <Modified>2019-05-23T11:55:31.008</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2019-05-22T16:06:02.477</Modified>
+      <Modified>2019-05-23T11:55:31.007</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17763.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -138,7 +138,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Depp Data\Study\Pattern Recognition\PatternRecoginitionProject\PR\PR\bin\x86\Debug\Core\PR.exe">
       <PackagePath>PR.exe</PackagePath>
-      <Modified>2019-05-22T16:06:03.387</Modified>
+      <Modified>2019-05-23T11:55:32.483</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

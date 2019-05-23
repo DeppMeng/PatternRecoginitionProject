@@ -73,6 +73,8 @@ class _BaseClassifier:
         self.train_labels = train_labels
         self.num_classes = max(self.train_labels) + 1
         assert (self.num_classes >= 2)
+        # print(self.num_classes)
+        # print(num_classes)
         if num_classes:
             assert (self.num_classes == num_classes)
 
@@ -185,7 +187,7 @@ class MlpClassifier(_BaseClassifier):
             pred_scores = self.forward(pred_points)
             self.pred_labels = np.argmax(pred_scores, axis=1)
 
-    def train(self, train_points, train_labels, total_epochs=1000, lr=0.1, batch_size=1, **kwargs):
+    def train(self, train_points, train_labels, total_epochs=1000, num_classes=None, lr=0.1, batch_size=1, **kwargs):
         self._load_train_data(train_points, train_labels, num_classes=num_classes)
         N = self.train_labels.shape[0]
         for epoch in range(total_epochs):
