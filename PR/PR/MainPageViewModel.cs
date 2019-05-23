@@ -24,6 +24,77 @@ namespace PR
             set { classifierSelect = value; OnPropertyChanged(); }
         }
 
+        private ObservableCollection<Data4Vis> dataVisTrain = new ObservableCollection<Data4Vis>();
+        public ObservableCollection<Data4Vis> DataVisTrain
+        {
+            get => dataVisTrain;
+            set { dataVisTrain = value; OnPropertyChanged(); }
+        }
+
+        private ObservableCollection<Data4Vis> dataVisTest = new ObservableCollection<Data4Vis>();
+        public ObservableCollection<Data4Vis> DataVisTest
+        {
+            get => dataVisTest;
+            set { dataVisTest = value; OnPropertyChanged(); }
+        }
+        //lzy
+        private ObservableCollection<Data4Vis> trainDataVis1 = new ObservableCollection<Data4Vis>();
+        public ObservableCollection<Data4Vis> TrainDataVis1
+        {
+            get => trainDataVis1;
+            set { trainDataVis1 = value; OnPropertyChanged(); }
+        }
+
+        private ObservableCollection<Data4Vis> trainDataVis2 = new ObservableCollection<Data4Vis>();
+        public ObservableCollection<Data4Vis> TrainDataVis2
+        {
+            get => trainDataVis2;
+            set { trainDataVis2 = value; OnPropertyChanged(); }
+        }
+
+        private ObservableCollection<Data4Vis> trainDataVis3 = new ObservableCollection<Data4Vis>();
+        public ObservableCollection<Data4Vis> TrainDataVis3
+        {
+            get => trainDataVis3;
+            set { trainDataVis3 = value; OnPropertyChanged(); }
+        }
+
+        private ObservableCollection<Data4Vis> trainDataVis4 = new ObservableCollection<Data4Vis>();
+        public ObservableCollection<Data4Vis> TrainDataVis4
+        {
+            get => trainDataVis4;
+            set { trainDataVis4 = value; OnPropertyChanged(); }
+        }
+
+        private ObservableCollection<Data4Vis> testDataVis1 = new ObservableCollection<Data4Vis>();
+        public ObservableCollection<Data4Vis> TestDataVis1
+        {
+            get => testDataVis1;
+            set { testDataVis1 = value; OnPropertyChanged(); }
+        }
+
+        private ObservableCollection<Data4Vis> testDataVis2 = new ObservableCollection<Data4Vis>();
+        public ObservableCollection<Data4Vis> TestDataVis2
+        {
+            get => testDataVis2;
+            set { testDataVis2 = value; OnPropertyChanged(); }
+        }
+
+        private ObservableCollection<Data4Vis> testDataVis3 = new ObservableCollection<Data4Vis>();
+        public ObservableCollection<Data4Vis> TestDataVis3
+        {
+            get => testDataVis3;
+            set { testDataVis3 = value; OnPropertyChanged(); }
+        }
+
+        private ObservableCollection<Data4Vis> testDataVis4 = new ObservableCollection<Data4Vis>();
+        public ObservableCollection<Data4Vis> TestDataVis4
+        {
+            get => testDataVis4;
+            set { testDataVis4 = value; OnPropertyChanged(); }
+        }
+        //lzy
+
         private int classifierSelectIndex = 0;
         public int ClassifierSelectIndex
         {
@@ -166,14 +237,26 @@ namespace PR
             for (int i = 0; i < NumClasses; i++)
             {
                 temp_center.x = i;
-                temp_center.y = i;
+                temp_center.y = i % 2;
                 temp_center.label = i;
                 list_center.Add(temp_center.Copy());
             }
             if (DatatypeSelectIndex == 0)
-                GenerateGaussianSample(traindatas, list_center, NumSamplePerClass, Sigma);
+            {
+                GenerateGaussianSample(traindatas, DataVisTrain, list_center, NumSamplePerClass, Sigma);
+                Data4Vis temp_datavis = new Data4Vis();
+                //temp_datavis.x = 1;
+                //temp_datavis.y = 1;
+                //temp_datavis.label = 1;
+
+                //DataVisTrain.Add(temp_datavis);
+                TrainDataClass(DataVisTrain);
+            }
             else
-                GenerateGaussianSample(testdatas, list_center, NumSamplePerClass, Sigma);
+            {
+                GenerateGaussianSample(testdatas, DataVisTest, list_center, NumSamplePerClass, Sigma);
+                TestDataClass(DataVisTest);
+            }
             FormatDataDisplay();
         }
 
@@ -181,6 +264,16 @@ namespace PR
         {
             traindatas = new List<Data>();
             testdatas = new List<Data>();
+            DataVisTrain.Clear();
+            DataVisTest.Clear();
+            TrainDataVis1.Clear();
+            TrainDataVis2.Clear();
+            TrainDataVis3.Clear();
+            TrainDataVis4.Clear();
+            TestDataVis1.Clear();
+            TestDataVis2.Clear();
+            TestDataVis3.Clear();
+            TestDataVis4.Clear();
             FormatDataDisplay();
         }
 
@@ -218,6 +311,42 @@ namespace PR
             catch
             { }
 
+        }
+
+        public async void Scan()
+        {
+            Data tempdata = new Data();
+            Data4Vis tempdatavis = new Data4Vis();
+            List<Data> predictdatalist = new List<Data>();
+            ObservableCollection<Data4Vis> predictlistvis = new ObservableCollection<Data4Vis>();
+            SendData senddata = new SendData();
+            List<int> predictlabels = new List<int>();
+            for (int i = 0; i < 6 / 0.2; i++)
+                for (int j = 0; j < 5 / 0.2; j++)
+                {
+                    tempdata.x = 0.2 * i - 1;
+                    tempdata.y = 0.2 * j - 2;
+                    tempdatavis.x = 0.2 * i - 1;
+                    tempdatavis.y = 0.2 * j - 2;
+                    predictdatalist.Add(tempdata.Copy());
+                    predictlistvis.Add(tempdatavis.Copy());
+                }
+            senddata.testdata = predictdatalist;
+            senddata.request_type = "Predict";
+            senddata.classifiertype = ClassifierSelectIndex;
+
+            string send = JsonConvert.SerializeObject(senddata);
+            try
+            {
+                await SendInfo(send);
+                predictlabels = curr_recv_data.pred_labels;
+            }
+            catch
+            { }
+
+            for (int i = 0; i < predictdatalist.Count; i++)
+                predictlistvis[i].label = predictlabels[i];
+            TestDataClass(predictlistvis);
         }
 
 
@@ -286,10 +415,11 @@ namespace PR
             }
         }
 
-        private void GenerateGaussianSample(List<Data> list_data, List<Data> center, int num_sample, double sigma)
+        private void GenerateGaussianSample(List<Data> list_data, ObservableCollection<Data4Vis> list_datavis, List<Data> center, int num_sample, double sigma)
         {
             Random random = new Random();
             Data temp_data = new Data();
+            Data4Vis temp_datavis = new Data4Vis();
             for (int i = 0; i < num_sample; i++)
             {
                 foreach (Data curr_center in center)
@@ -298,6 +428,11 @@ namespace PR
                     temp_data.y = SampleGaussian(random, curr_center.y, sigma);
                     temp_data.label = curr_center.label;
                     list_data.Add(temp_data.Copy());
+
+                    temp_datavis.x = temp_data.x;
+                    temp_datavis.y = temp_data.y;
+                    temp_datavis.label = curr_center.label;
+                    list_datavis.Add(temp_datavis.Copy());
                 }
             }
         }
@@ -311,6 +446,59 @@ namespace PR
 
             double y1 = Math.Sqrt(-2.0 * Math.Log(x1)) * Math.Cos(2.0 * Math.PI * x2);
             return y1 * stddev + mean;
+        }
+        public void TrainDataClass(ObservableCollection<Data4Vis> Data)
+        {
+            TrainDataVis1.Clear();
+            TrainDataVis2.Clear();
+            TrainDataVis3.Clear();
+            TrainDataVis4.Clear();
+            foreach (Data4Vis tempdata in Data)
+                switch (tempdata.label)
+                {
+                    case 0:
+                        TrainDataVis1.Add(tempdata);
+                        break;
+                    case 1:
+                        TrainDataVis2.Add(tempdata);
+                        break;
+                    case 2:
+                        TrainDataVis3.Add(tempdata);
+                        break;
+                    case 3:
+                        TrainDataVis4.Add(tempdata);
+                        break;
+                    default:
+
+                        break;
+                }
+        }
+
+        public void TestDataClass(ObservableCollection<Data4Vis> Data)
+        {
+            TestDataVis1.Clear();
+            TestDataVis2.Clear();
+            TestDataVis3.Clear();
+            TestDataVis4.Clear();
+            foreach (Data4Vis tempdata in Data)
+                switch (tempdata.label)
+                {
+                    case 0:
+                        TestDataVis1.Add(tempdata);
+                        break;
+                    case 1:
+                        TestDataVis2.Add(tempdata);
+                        break;
+                    case 2:
+                        TestDataVis3.Add(tempdata);
+                        break;
+                    case 3:
+                        TestDataVis4.Add(tempdata);
+                        break;
+                    default:
+
+                        break;
+                }
         }
 
         #endregion

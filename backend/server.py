@@ -5,7 +5,8 @@ import numpy as np
 
 app = Flask(__name__)
 LC = LinearClassifier()
-NLC = MlpClassifier(num_layers=2, in_features=2, hidden_features=5, num_classes=2)
+# NLC = MlpClassifier(num_layers=2, in_features=2, hidden_features=5, num_classes=2)
+global NLC
 type_train_classifier = 0   # 0 is linear classifier, and 1 is nonlinear classifier
 
 def unpack(package):
@@ -35,7 +36,10 @@ def train(jsonpack):
         }
     else:
         type_train_classifier = 1
-        NLC.train(train_points, train_labels, total_epochs=100, lr=0.1)
+        global NLC
+        NLC = MlpClassifier(num_layers=2, in_features=2, hidden_features=5, num_classes=max(train_labels) + 1)
+        # print(NLC.num_classes)
+        NLC.train(train_points, train_labels, total_epochs=300, lr=0.02)
         result = {
             "train_accuracy": NLC.train_accuracy,
             "pred_labels": NLC.pred_labels.tolist()
